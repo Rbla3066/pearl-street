@@ -20,7 +20,7 @@ html, body {
 }
 .secondaryHeader {
 	color: white;
-	text-shadow: 1px 1px gray;
+	text-shadow: 2px 2px gray;
 	text-align: center;
 
 }
@@ -44,10 +44,23 @@ html, body {
   box-shadow: 10px 15px 10px black;
   border-radius: 0px 0px 5px 5px;
 }
+.lightshadow {
+  -webkit-box-shadow: 0 3px 5px black;
+  -moz-box-shadow: 0 3px 5px black;
+  box-shadow: 0 3px 5px black;
+}
+.shadow {
+  -webkit-box-shadow: 10px 15px 10px black;
+  -moz-box-shadow: 10px 15px 10px black;
+  box-shadow: 10px 15px 10px black;
+}
 .contentBox {
 	color: white;
 	margin: 15px;
 	padding: 10px;
+}
+.rounded {
+	border-radius: 5px;
 }
 #footer {
 	width: 100%;
@@ -153,5 +166,80 @@ h4 {
 .socialImg {
 	height: 70px;
 }
+
+
+
+
+
+
+
+
+
+.footerLogo{
+      margin: auto;
+    }
+    @media screen and (max-width: 992px) {
+      .roundImageText {
+        float: right;
+        width: 50%;
+      }
+      .roundImageContainer {
+        float: left;
+        margin: 13px 0px 25px 13px;
+      }
+      #topCircle {
+        margin-top: -55px;
+      }
+      .secondText {
+        padding-top: 55px;
+      }
+      .keyServiceContainer {
+        border-style: solid;
+        border-width: 2px 0px 0px 0px;
+        border-color: black;
+        -webkit-box-shadow: 0 10px 6px -6px black;
+       -moz-box-shadow: 0 10px 6px -6px black;
+            box-shadow: 0 10px 6px -6px black;
+      }
+      .secContainer {
+        clear: both;
+      }
+      .contentBox {
+        border-style: solid;
+        border-width: 0px 0px 2px 0px;
+        border-color: black;
+        padding-bottom: 25px;
+      }
+    }
+    @media screen and (max-width: 495px) {
+      .roundImageText {
+        float: none;
+        width: 100%;
+      }
+      .roundImageContainer {
+        float: none;
+        margin: auto;
+      }
+      .secondText {
+        padding: 10px;
+      }
+      .secContainer {
+        padding-top: 15px;
+      }
+      #customerQuotes {
+        height: 250px;
+      }
+    }
+    @media screen and (max-width: 420px) {
+      #mainHeader {
+        padding-top: 100px;
+      }
+      .contentBox {
+        margin: 5px;
+      }
+      #landingView {
+        min-height: 400px;
+      }
+    }
 
 
