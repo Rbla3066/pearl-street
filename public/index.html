@@ -65,6 +65,9 @@
       .secContainer {
         padding-top: 15px;
       }
+      #customerQuotes {
+        height: 250px;
+      }
     }
     @media screen and (max-width: 420px) {
       #mainHeader {
@@ -150,8 +153,8 @@
   <div class="row">
     <div id="customerQuotes" class="col-md-12">
       <div class="quote" id="quote1">
-          <p>"Pearl Street did everything they said they would, and more..."<p>
-         <p style="font-size: 18px; color: black; text-shadow: none;"> Atlantic Health Jets Training Center</p>
+          <p id="quoteContent">"Pearl Street did everything they said they would, and more..."<p>
+         <p style="font-size: 18px; color: black; text-shadow: none;"><strong id="quotee" style="color: black"> Atlantic Health Jets Training Center</strong></p>
       </div>
     </div>
   </div>
@@ -159,7 +162,10 @@
   <div class="row">
     <div class="col-md-6 col-lg-6">
       <div class="contentBox">
+      <div class="secHeaderContainer">
       <h2 class="secondaryHeader">WELCOME TO PEARL STREET</h2>
+      </div>
+      <img src="assets/gymnasium.jpg" class="img-responsive" style="margin: auto;">
       <p style="margin-top: 20px">
         <strong>Pearl Street Systems</strong> is a leading systems integrator and professional services provider of commercial and industrial LED lighting upgrades. With a skilled and experienced staff whose only focus is LED lighting upgrades, <strong>Pearl Street</strong> develops and implements custom engineered solutions that deliver measurable long-term value.
       </p>
@@ -172,17 +178,18 @@
       <p>
         <strong>Pearl Street Systems</strong> is one of the largest LED lighting system integrators and professional service providers in the Northeast.  We have an impressive list of satisfied customers who have one thing in common:  they demand high quality, professionalism and measurable value.  We encourage you to contact us at <strong>(info@pearlstreetled.com)</strong> us to learn more about our capabilities, project success stories and what we can do for you.
       </p>
-        <div style="width: 100%; text-align: center;">
-      <a href="/contact"><button style="font-size: 24px" class="btn btn-primary">Contact Us</button></a>
-      </div>
-      <img src="assets/gymnasium.jpg" class="img-responsive" style="padding: 5px; margin: auto; margin-top: 25px">
+        <div style="width: 100%; text-align: center; padding: 15px">
+          <a href="/contact"><button style="font-size: 24px;" id="contactUs" class="btn btn-primary">Contact Us</button></a>
+        </div>
 
       </div>
     </div>
     <div class="col-md-6 col-lg-6">
       <div class="contentBox">
-      <h2 class="secondaryHeader">SPECIALISTS IN LED LIGHTING</h2>
-      <img class="img-responsive" style="padding: 5px; margin: auto;margin-bottom: 25px" src="assets/merck-2.jpg">
+        <div class="secHeaderContainer">
+          <h2 class="secondaryHeader">SPECIALISTS IN LED LIGHTING</h2>
+        </div>
+      <img class="img-responsive" style="margin: auto; margin-bottom: 25px" src="assets/Jets.jpg">
       <p>
         Pearl Street’s services cover every phase of lighting upgrades including: initial feasibility assessments, comprehensive investment grade lighting audits, professional lighting design and engineering services, equipment procurement and supply, project management, design-supply or turnkey design-build project delivery and project financing.  Pearl Street Systems differentiates itself from other LED upgrade providers in these key areas:
       </p>
@@ -218,6 +225,19 @@
 
 	<script src="assets/js/navbar.js"></script>
   <script type="text/javascript">
+    var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Crystal Auto Mall'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}];
+    var ind = 0;
+    setInterval(function(){
+      ind++;
+      if(ind == 3) ind = 0;
+      $("#quote1").fadeOut("slow", function(){
+        $("#quoteContent").html(quotes[ind].quote);
+        $("#quotee").html(quotes[ind].quotee);
+        $("#quote1").fadeIn();
+      })
+      
+    }, 3000)
+
     $(window).scroll(function(){
       if($(this).scrollTop() > 120){
         //$(".keyService").fadeIn();

@@ -15,18 +15,29 @@ html, body {
 .navbar {
 	min-width: 300px;
 }
-
 .copyright {
 	margin-top: 15px;
 }
 .secondaryHeader {
 	color: #0c5a82;
-	text-shadow: 2px 2px black;
+	text-shadow: 1px 1px black;
 	text-align: center;
 }
+.secHeaderContainer {
+	margin: auto;
+	background-color: lightgray;
+  padding: 2px;
+  border-radius: 5px 5px 0px 0px;
+}
 .contentBox {
-	color: white;
-	margin: 25px;
+	color: black;
+	background-color: white;
+	margin: 15px;
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-box-shadow: 10px 15px 10px black;
+  -moz-box-shadow: 10px 15px 10px black;
+  box-shadow: 10px 15px 10px black;
 }
 #footer {
 	width: 100%;
@@ -84,6 +95,9 @@ html, body {
 }
 #customerQuotes {
   width: 100%;
+  -webkit-box-shadow: 10px 15px 10px black;
+  -moz-box-shadow: 10px 15px 10px black;
+  box-shadow: 10px 15px 10px black;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#03a2d7+0,0e84a8+40,035f7d+100 */
   background: rgb(3,162,215); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(3,162,215,1) 0%, rgba(14,132,168,1) 40%, rgba(3,95,125,1) 100%); /* FF3.6-15 */
@@ -99,6 +113,9 @@ html, body {
 }
 .quote {
   padding-top: 50px;
+}
+strong {
+	color: #0c5a82;
 }
 #mainHeader {
   font-family: 'Oswald', sans-serif;
