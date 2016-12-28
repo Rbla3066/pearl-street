@@ -24,6 +24,13 @@ html, body {
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
 }
+#headerSubText {
+	color: #0c5a82;
+	font-size: 47px;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 2px 2px black;
+	margin-top: -18px;
+}
 .altImage {
 	width: 220px;
 }
@@ -88,7 +95,7 @@ html, body {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 500px;
+  min-height: 700px;
   text-align: center;
   color: white;
 }
@@ -109,7 +116,7 @@ html, body {
 .roundImageText {
   text-align: center;
   color: #0c5a82;
-  height: 100px;
+  height: 130px;
   font-size: 18px;
   text-shadow: 2px 2px black;
   font-family: 'Oswald', sans-serif;
@@ -117,6 +124,10 @@ html, body {
 }
 .keyServices {
   padding-bottom: 25px;
+}
+.serviceSubtext {
+	font-size: 18px;
+	color: white;
 }
 #customerQuotes {
   width: 100%;
@@ -153,12 +164,13 @@ strong {
 #mainHeader {
   font-family: 'Oswald', sans-serif;
   font-size: 80px;
-  padding-top: 200px;
+  padding-top: 250px;
   font-weight: bold;
   text-shadow: 4px 4px black;
 }
 #mainHeaderContainer {
   height: 100px;
+  z-index: 8000;
 }
 h4 {
 	color: #0c5a82;
@@ -309,6 +321,20 @@ h4 {
          		transform: scale(1);
          	}
          }
+         @keyframes headerTransfer {
+         	0% {
+         		transform: scale(1) translateX(0px) translateY(0px);
+         		opacity: 1;
+         	}
+         	100% {
+         		transform: scale(0.3) translateX(-700px) translateY(-200px);
+         		opacity: 0;
+         	}
+         }
+         .headerTransfer {
+         	animation-name: headerTransfer;
+         	animation-duration: 2s;
+         }
          .shrink {
          	animation-name: shrink;
          	animation-duration: 1s;
@@ -368,9 +394,7 @@ h4 {
         border-style: solid;
         border-width: 2px 0px 0px 0px;
         border-color: black;
-        -webkit-box-shadow: 0 10px 6px -6px black;
-       -moz-box-shadow: 0 10px 6px -6px black;
-            box-shadow: 0 10px 6px -6px black;
+   
       }
       .secContainer {
         clear: both;
@@ -409,7 +433,10 @@ h4 {
         margin: 5px;
       }
       #landingView {
-        min-height: 400px;
+        min-height: 600px;
+      }
+      .keyServiceContainer {
+      	padding-bottom: 40px
       }
     }
 

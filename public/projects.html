@@ -7,6 +7,8 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
 
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -14,9 +16,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
   <link rel="stylesheet" href="assets/css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="description" content="Pearl Street Systems provides LED lighting upgrades, retrofits, audits, consulting, engineering, and design services across New Jersey and New York."/>
+  <meta name="keywords" content="LED lighting upgrades, LED lighting retrofits, lighting audits, lighting upgrades, lighting retrofits, energy efficiency, energy conservation, site lighting upgrades, lighting controls, LED lighting retrofits, LED fixtures, LED lamps, energy savings, LED rebates, LED lighting rebates, LED lighting incentives, NJ, NY, LED"/>
+  <meta name="generator" content="2017.0.1.363"/>
+  <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW, ARCHIVE"/><!-- custom meta -->
+  <style type="text/css">
+    .projectContainer {
+      height: 300px;
+    }
+  </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="lightshadow navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -35,24 +48,98 @@
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-button1" data-linktarget="homePage"><a href="/">HOME </a></li>
-        <li class="navbar-button1" data-linktarget="aboutPage"><a href="/about">ABOUT </a></li>
-        <li class="navbar-button1" data-linktarget="aboutPage"><a href="/services">SERVICES </a></li>
-        <li class="active navbar-button1" data-linktarget="aboutPage"><a href="/projects">PROJECTS <span class="sr-only">(current)</span></a></li>
-        <li class="navbar-button1" data-linktarget="contactPage"><a href="/contact">CONTACT </a></li>
+        <li class="navbar-button1" data-linktarget="homePage"><a href="/">HOME </span></a></li>
+        <li class="navbar-button1"><a href="/about">ABOUT </a></li>
+        <li class="navbar-button1"><a href="/services">SERVICES </a></li>
+        <li class="active navbar-button1"><a href="/projects">PROJECTS <span class="sr-only">(current)</a></li>
+        <li class="navbar-button1"><a href="/contact">CONTACT </a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-
-<div id="footer">
-  <p id="copyright"> ©COPYRIGHT  2017 Pearl Street Systems </p>
+<div class="container-fluid" style="padding-top: 50px">
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer">
+      
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-image: url('assets/Jets.jpg'); background-size: cover; background-position: center;">
+        
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-color: yellow">
+      
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-color: green">
+      
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-color: purple">
+      
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-color: pink">
+      
+    </div>
+  </div>
+  <div class="row">
+    <div id="footer" class="col-md-12">
+        <div class="socialLogos">
+          <span class="socialIcon">
+            <a href=""><img class="socialImg" src="assets/logos/facebook.png"></a>
+          </span>
+          <span class="socialIcon">
+            <a href=""><img class="socialImg" src="assets/logos/twitter.png"></a>
+          </span>
+          <span class="socialIcon">
+            <a href=""><img class="socialImg" src="assets/logos/email.png"></a>
+          </span>
+        </div>
+        <p class="copyright">©COPYRIGHT  2016 Pearl Street Systems</p>
+    </div>
+  </div>
 </div>
+
+
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <script src="assets/js/navbar.js"></script>
+  <script type="text/javascript">
+
+
+    $.fn.isOnScreen = function(){
+
+    var win = $(window);
+
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+};
+
+    $(window).scroll(function(){
+      $(".scrollEffect").map(function(){
+        if($(this).isOnScreen()){
+          $(this).addClass($(this).data("effect"));
+        }
+      });
+
+    });
+    $(".socialImg").on("mouseover", function(){
+      $(this).attr("style", "background-color: white; border-radius: 35px;")
+    });
+    $(".socialImg").on("mouseleave", function(){
+      $(this).attr("style", "background-color: transparent;")
+    });
+
+  </script>
 </body>
 </html>

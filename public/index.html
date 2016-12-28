@@ -34,7 +34,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img style="height: 45px; margin-top: -12px" src="assets/pearlstreetfulllogo.png"></a>
+      <a class="navbar-brand" href="/index.html"><img style="height: 45px; margin-top: -12px" src="assets/pearlstreetfulllogo.png"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,8 +57,9 @@
   <div class="row">
     <div class="col-12-md">
       <div id="landingView">
-        <div id="mainHeaderContainer">
-         <h1 id="mainHeader" class="expandIn">PEARL STREET</h1>
+        <div id="mainHeaderContainer" class="expandIn">
+         <h1 id="mainHeader">PEARL STREET</h1>
+         <h2 id="headerSubText">LED LIGHTING SYSTEMS</h2>
         </div>
       </div>
     </div>
@@ -70,6 +71,7 @@
       </div>
       <div data-effect="bounceInLeft" class="roundImageText scrollEffect">
         <p class="keyService">CUSTOM ENGINEERED LED LIGHTING UPGRADES</p>
+        <p class="serviceSubtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod commodo lectus, quis tincidunt libero iaculis vel.</p>
       </div>
     </div>
     <div class="col-md-4 keyServiceContainer secContainer">
@@ -78,6 +80,7 @@
       </div>
       <div data-effect="bounceInBottom" class="roundImageText scrollEffect secondText">
         <p class="keyService">EXPERT & UNBIASED LIGHTING CONSULTING SERVICES</p>
+        <p class="serviceSubtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod commodo lectus, quis tincidunt libero iaculis vel.</p>
       </div>
     </div>
     <div class="col-md-4 keyServiceContainer secContainer">
@@ -86,6 +89,7 @@
       </div>
       <div data-effect="bounceInRight" class="roundImageText scrollEffect secondText">
         <p class="keyService" style="margin-top: 10px">FLEXIBLE PROJECT FINANCING</p>
+        <p class="serviceSubtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod commodo lectus, quis tincidunt libero iaculis vel.</p>
       </div>
     </div>
   </div>
@@ -199,6 +203,9 @@
 
 	<script src="assets/js/navbar.js"></script>
   <script type="text/javascript">
+    var navLogo = $(".navbar-brand");
+    navLogo.hide();
+
     var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Crystal Auto Mall'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}];
     var ind = 0;
     setInterval(function(){
@@ -230,19 +237,23 @@
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 
 };
-
+    var header = $("#mainHeaderContainer");
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
           $(this).addClass($(this).data("effect"));
         }
-      })
+      });
       if($(this).scrollTop() > 120){
-        //$(".keyService").fadeIn();
-        $("#mainHeader").fadeOut();
+        header.removeClass("expandIn");
+        header.addClass("headerTransfer");
+        header.fadeOut();
+        navLogo.fadeIn();
       } else {
-        //$(".keyService").fadeOut();
-        $("#mainHeader").fadeIn();
+        header.removeClass("headerTransfer");
+        header.addClass("expandIn");
+        header.fadeIn();
+        navLogo.fadeOut();
       }
 
     });
