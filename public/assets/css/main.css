@@ -424,6 +424,9 @@ h4 {
       #customerQuotes {
         height: 250px;
       }
+      #specialists {
+      	display: none;
+      }
     }
     @media screen and (max-width: 420px) {
       #mainHeader {
