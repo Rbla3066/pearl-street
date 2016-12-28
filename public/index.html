@@ -17,6 +17,11 @@
 
 	<link rel="stylesheet" href="assets/css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="description" content="Pearl Street Systems provides LED lighting upgrades, retrofits, audits, consulting, engineering, and design services across New Jersey and New York."/>
+  <meta name="keywords" content="LED lighting upgrades, LED lighting retrofits, lighting audits, lighting upgrades, lighting retrofits, energy efficiency, energy conservation, site lighting upgrades, lighting controls, LED lighting retrofits, LED fixtures, LED lamps, energy savings, LED rebates, LED lighting rebates, LED lighting incentives, NJ, NY, LED"/>
+  <meta name="generator" content="2017.0.1.363"/>
+  <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW, ARCHIVE"/><!-- custom meta -->
 </head>
 <body>
 <nav class="lightshadow navbar navbar-inverse navbar-fixed-top">
@@ -53,7 +58,7 @@
     <div class="col-12-md">
       <div id="landingView">
         <div id="mainHeaderContainer">
-         <h1 id="mainHeader">PEARL STREET</h1>
+         <h1 id="mainHeader" class="expandIn">PEARL STREET</h1>
         </div>
       </div>
     </div>
@@ -61,25 +66,25 @@
   <div class="row blackGradient keyServices">
     <div class="col-md-4 keyServiceContainer">
       <div class="roundImageContainer" id="topCircle">
-        <img src="assets/stevens2.jpg">
+        <img class="hoverExpand" src="assets/stevens2.jpg">
       </div>
-      <div class="roundImageText">
+      <div data-effect="bounceInLeft" class="roundImageText scrollEffect">
         <p class="keyService">CUSTOM ENGINEERED LED LIGHTING UPGRADES</p>
       </div>
     </div>
     <div class="col-md-4 keyServiceContainer secContainer">
       <div class="roundImageContainer">
-        <img src="assets/gymnasium.jpg">
+        <img class="hoverExpand" src="assets/gymnasium.jpg">
       </div>
-      <div class="roundImageText secondText">
+      <div data-effect="bounceInBottom" class="roundImageText scrollEffect secondText">
         <p class="keyService">EXPERT & UNBIASED LIGHTING CONSULTING SERVICES</p>
       </div>
     </div>
     <div class="col-md-4 keyServiceContainer secContainer">
       <div class="roundImageContainer">
-        <img style="width: 220px" src="assets/pingry.jpg">
+        <img class="hoverExpand altImage" src="assets/pingry.jpg">
       </div>
-      <div class="roundImageText secondText">
+      <div data-effect="bounceInRight" class="roundImageText scrollEffect secondText">
         <p class="keyService" style="margin-top: 10px">FLEXIBLE PROJECT FINANCING</p>
       </div>
     </div>
@@ -95,7 +100,7 @@
   <!-- style="background-image: url('assets/Jets.jpg'); background-size: contain"-->
   <div class="row">
     <div class="col-md-6 col-lg-6">
-      <div class="contentBox shadow blackGradient rounded">
+      <div data-effect="bounceInLeft" class="contentBox scrollEffect shadow blackGradient rounded">
       <div class="secHeaderContainer">
       <h2 class="secondaryHeader">WELCOME TO PEARL STREET</h2>
       </div>
@@ -119,7 +124,7 @@
       </div>
     </div>
     <div class="col-md-6 col-lg-6">
-      <div class="contentBox shadow blackGradient rounded">
+      <div data-effect="bounceInRight" class="contentBox scrollEffect shadow blackGradient rounded">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">SPECIALISTS IN LED LIGHTING</h2>
         </div>
@@ -145,6 +150,7 @@
       </div>
     </div>
   </div>
+  <!--
   <div class="row" style="margin-top: 25px; background-color: white">
     <div class="col-md-3 col-sm-3">
       <div style="margin: auto; width: 130px">
@@ -167,6 +173,7 @@
       </div>
     </div>
   </div>
+  -->
   <div class="row">
     <div id="footer" class="col-md-12">
         <div class="socialLogos">
@@ -205,7 +212,31 @@
       
     }, 3000);
 
+    $.fn.isOnScreen = function(){
+
+    var win = $(window);
+
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+};
+
     $(window).scroll(function(){
+      $(".scrollEffect").map(function(){
+        if($(this).isOnScreen()){
+          $(this).addClass($(this).data("effect"));
+        }
+      })
       if($(this).scrollTop() > 120){
         //$(".keyService").fadeIn();
         $("#mainHeader").fadeOut();
@@ -213,18 +244,22 @@
         //$(".keyService").fadeOut();
         $("#mainHeader").fadeIn();
       }
-      if($(this).scrollTop() > 260){
-        $("#quote1").fadeIn();
-      } else {
-        $(".quote").fadeOut();
-      }
+
     });
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "background-color: white; border-radius: 35px;")
-    })
+    });
     $(".socialImg").on("mouseleave", function(){
       $(this).attr("style", "background-color: transparent;")
-    })
+    });
+  //  $(".hoverExpand").on("mouseover", function(){
+  //    $(this).addClass("expanded");
+  //    $(this).removeClass("shrink");
+  //  });
+  //  $(".hoverExpand").on("mouseleave", function(){
+  //    $(this).removeClass("expanded");
+  //    $(this).addClass("shrink");
+  //  });
   </script>
 </body>
 </html>
