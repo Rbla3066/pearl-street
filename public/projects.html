@@ -58,38 +58,59 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container-fluid" style="padding-top: 50px">
+<div class="container-fluid" style="padding-top: 50px; background-color: lightgray">
   <div class="row">
-    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-image: url('assets/Jets.jpg'); background-size: cover; background-position: center; background-position: fixed;">
-     <div style="height: 50px; width: 100%;" class="blackGradient"></div> 
+      <div id="landingView" style="background-image: url('assets/gwu.png')"></div>
+  </div>
+  <div class="row" style="padding-bottom: 25px">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div data-logo="https://upload.wikimedia.org/wikipedia/commons/4/48/QU_wordmark.png" class="projectContainer"></div>
+      <div class="projectDescription blackGradient">
+        <h3>Quinnapiac</h3>
+      </div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-image: url('assets/Jets.jpg'); background-size: cover; background-position: center; background-position: fixed;">
-     <div style="height: 50px; width: 100%;" class="blackGradient"></div> 
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div data-logo="https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/logos/Princeton_University.png" class="projectContainer"></div>
+      <div class="projectDescription blackGradient">
+        <h3>Princeton University</h3>
+      </div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-image: url('assets/Jets.jpg'); background-size: cover; background-position: center; background-position: fixed;">
-     <div style="height: 50px; width: 100%;" class="blackGradient"></div> 
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="projectContainer" data-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/New_York_Jets_logo.svg/800px-New_York_Jets_logo.svg.png"></div>
+      <div class="projectDescription blackGradient">
+        <h3>Jets Atlantic Training Center</h3>
+      </div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-image: url('assets/Jets.jpg'); background-size: cover; background-position: center; background-position: fixed;">
-     <div style="height: 50px; width: 100%;" class="blackGradient"></div> 
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="projectContainer"></div>
+      <div class="projectDescription blackGradient"></div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-image: url('assets/Jets.jpg'); background-size: cover; background-position: center; background-position: fixed;">
-     <div style="height: 50px; width: 100%;" class="blackGradient"></div> 
+   <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="projectContainer"></div>
+      <div class="projectDescription blackGradient"></div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12 projectContainer" style="background-image: url('assets/Jets.jpg'); background-size: cover; background-position: center; background-position: fixed;">
-     <div style="height: 50px; width: 100%;" class="blackGradient"></div> 
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="projectContainer"></div>
+      <div class="projectDescription blackGradient"></div>
     </div>
   </div>
   <div class="row">
-    <div id="footer" class="col-md-12">
+    <div id="footer" class="col-md-12 blackGradient">
         <div class="socialLogos">
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="assets/logos/facebook.png"></a>
+            <a href=""><img class="socialImg" src="http://icons.iconarchive.com/icons/martz90/circle/512/linkedin-icon.png"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="assets/logos/twitter.png"></a>
+            <a href=""><img class="socialImg" src="https://lh4.ggpht.com/-C1kTX5bl4S7nyNWh6PFFX-WgqZTz7DIc3ZaBZiPlv8-SH0bw4aQuKceTQPoLfq_Pwlw=w300"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="assets/logos/email.png"></a>
+            <a href=""><img class="socialImg" src="assets/logos/green_building_council.png"></a>
+          </span>
+          <span class="socialIcon">
+            <a href=""><img class="socialImg" src="https://www.cyberpower.com/images/icon_energy-star_s.png"></a>
+          </span>
+          <span class="socialIcon">
+            <a href=""><img class="socialImg" src="http://www.njcleanenergy.com/files/template_images/NJCEPBPU90.png"></a>
           </span>
         </div>
         <p class="copyright">©COPYRIGHT  2016 Pearl Street Systems</p>
@@ -133,11 +154,19 @@
       });
 
     });
+
+    $(".projectContainer").on("mouseover", function(){
+      if($(this).data('logo')){
+        $(this).attr("style", "background-image: url('"+$(this).data('logo')+"'); background-size: contain; background-repeat: no-repeat")
+      };
+    }).on("mouseleave", function(){
+      $(this).attr("style", "")
+    })
     $(".socialImg").on("mouseover", function(){
-      $(this).attr("style", "background-color: white; border-radius: 35px;")
+      $(this).attr("style", "transform: scale(1.2)")
     });
     $(".socialImg").on("mouseleave", function(){
-      $(this).attr("style", "background-color: transparent;")
+      $(this).attr("style", "transform: scale(1)")
     });
 
   </script>

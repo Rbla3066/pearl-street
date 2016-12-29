@@ -172,14 +172,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#037adb', end
   text-shadow: 2px 2px gray;
 }
 .cyanGradient {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#65befd+4,057acd+100 */
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0382dd+4,034c81+100 */
-background: rgb(3,130,221); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(3,130,221,1) 4%, rgba(3,76,129,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(3,130,221,1) 4%,rgba(3,76,129,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(3,130,221,1) 4%,rgba(3,76,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0382dd', endColorstr='#034c81',GradientType=0 ); /* IE6-9 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#037adb+0,0e66aa+40,034881+100 */
+background: rgb(3,122,219); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(3,122,219,1) 0%, rgba(14,102,170,1) 40%, rgba(3,72,129,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(3,122,219,1) 0%,rgba(14,102,170,1) 40%,rgba(3,72,129,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(3,122,219,1) 0%,rgba(14,102,170,1) 40%,rgba(3,72,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#037adb', endColorstr='#034881',GradientType=0 ); /* IE6-9 */
 
+}
+.projectDescription {
+	height: 50px;
+	width: 100%;
+	margin-top: -50px;
+	text-align: center;
+	color: white;
+}
+.projectContainer {
+	background-image: url('../Jets.jpg');
+	margin-top: 25px;
+	background-size: cover;
+	background-position: center;
+	background-position: fixed;
 }
 .quote {
   padding-top: 50px;
