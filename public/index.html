@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
 
 
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Oswald" rel="stylesheet">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -24,6 +24,11 @@
   <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW, ARCHIVE"/><!-- custom meta -->
 </head>
 <body>
+<div style="position: absolute; width: 100%; height: 3200px; background-color: white; z-index: 9999" class="loadingPage">
+  <div style="width: 400px; margin: auto; margin-top: 100px" class="loadingGif">
+      <img style="width: 395px" src="http://www.capso.tv/public/img/create/loading_create.gif">
+  </div>
+</div>
 <nav class="lightshadow navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -60,6 +65,8 @@
         <div id="mainHeaderContainer" class="expandIn">
          <h1 id="mainHeader">PEARL STREET</h1>
          <h2 id="headerSubText">LED LIGHTING SYSTEMS</h2>
+         <img class="mainLogo" src="assets/logos/pearl_street_logo.jpg">
+         
         </div>
       </div>
     </div>
@@ -104,7 +111,7 @@
   <div class="row">
     <div class="col-md-12 contentArea">
       <div class="textArea scrollEffect" data-effect="fadeIn">
-        <p><strong>Pearl Street Systems</strong> is a leading systems integrator and professional services provider of commercial and industrial LED lighting upgrades. With a skilled and experienced staff whose only focus is LED lighting upgrades, <strong>Pearl Street</strong> develops and implements custom engineered solutions that deliver measurable long-term value.</p>
+        <p>Pearl Street Systems is a leading systems integrator and professional services provider of commercial and industrial LED lighting upgrades. With a skilled and experienced staff whose only focus is LED lighting upgrades, Pearl Street develops and implements custom engineered solutions that deliver measurable long-term value.</p>
         <div style="width: 100%; text-align: center; padding: 15px">
           <a href="/contact"><button style="font-size: 24px;" id="contactUs" class="btn btn-primary">Contact Us</button></a>
         </div>
@@ -136,16 +143,22 @@
   </div>
   -->
   <div class="row">
-    <div id="footer" class="col-md-12">
+    <div id="footer" class="col-md-12 blackGradient">
         <div class="socialLogos">
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="assets/logos/facebook.png"></a>
+            <a href=""><img class="socialImg" src="http://icons.iconarchive.com/icons/martz90/circle/512/linkedin-icon.png"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="assets/logos/twitter.png"></a>
+            <a href=""><img class="socialImg" src="https://lh4.ggpht.com/-C1kTX5bl4S7nyNWh6PFFX-WgqZTz7DIc3ZaBZiPlv8-SH0bw4aQuKceTQPoLfq_Pwlw=w300"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="assets/logos/email.png"></a>
+            <a href=""><img class="socialImg" src="assets/logos/green_building_council.png"></a>
+          </span>
+          <span class="socialIcon">
+            <a href=""><img class="socialImg" src="https://www.cyberpower.com/images/icon_energy-star_s.png"></a>
+          </span>
+          <span class="socialIcon">
+            <a href=""><img class="socialImg" src="http://www.njcleanenergy.com/files/template_images/NJCEPBPU90.png"></a>
           </span>
         </div>
         <p class="copyright">©COPYRIGHT  2016 Pearl Street Systems</p>
@@ -165,9 +178,6 @@
     var mobile = false;
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         mobile = true;
-        setTimeout(function(){
-          navLogo.show();
-        }, 2000);
       }
     var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Crystal Auto Mall'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}];
     var ind = 0;
@@ -182,7 +192,7 @@
       
     }, 3000);
 
-    $.fn.isOnScreen = function(){
+$.fn.isOnScreen = function(){
 
     var win = $(window);
 
@@ -200,11 +210,14 @@
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 
 };
+
     var header = $("#mainHeaderContainer");
     $(window).scroll(function(){
       if(mobile) return;
       $(".scrollEffect").map(function(){
-        if($(this).isOnScreen()){
+        console.log("hit");
+        if($(this).data("in-view") != "true" && $(this).isOnScreen()){
+          $(this).data("in-view", "true")
           $(this).addClass($(this).data("effect"));
         }
       });
@@ -222,12 +235,22 @@
       }
 
     });
+    $(".btn").on("mouseover", function(){
+      $(this).attr("style", "transform: scale(2)")
+    });
+    $(".btn").on("mouseleave", function(){
+      $(this).attr("style", "transform: scale(1.5)")
+    });
     $(".socialImg").on("mouseover", function(){
-      $(this).attr("style", "background-color: white; border-radius: 35px;")
+      $(this).attr("style", "transform: scale(1.2)")
     });
     $(".socialImg").on("mouseleave", function(){
-      $(this).attr("style", "background-color: transparent;")
+      $(this).attr("style", "transform: scale(1)")
     });
+    $(document).ready(function(){
+      console.log("done")
+      $(".loadingPage").fadeOut("slow");
+    })
   //  $(".hoverExpand").on("mouseover", function(){
   //    $(this).addClass("expanded");
   //    $(this).removeClass("shrink");

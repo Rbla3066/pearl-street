@@ -31,6 +31,11 @@ html, body {
 	text-shadow: 2px 2px black;
 	margin-top: -18px;
 }
+.mainLogo {
+	height: 120px;
+	margin-top: -170px;
+	margin-right: -555px
+}
 .altImage {
 	width: 220px;
 }
@@ -77,14 +82,7 @@ html, body {
 }
 #footer {
 	width: 100%;
-	height: 125px;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#03a2d7+0,0e84a8+40,035f7d+100 */
-    background: rgb(3,162,215); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(3,162,215,1) 0%, rgba(14,132,168,1) 40%, rgba(3,95,125,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(3,162,215,1) 0%,rgba(14,132,168,1) 40%,rgba(3,95,125,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(3,162,215,1) 0%,rgba(14,132,168,1) 40%,rgba(3,95,125,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a2d7', endColorstr='#035f7d',GradientType=0 ); /* IE6-9 */
-    color: black;
+    color: white;
     text-shadow: 1px 1px gray;
     font-size: 12px;
     text-align: center;
@@ -95,9 +93,10 @@ html, body {
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 700px;
+  min-height: 550px;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 .contentArea {
   background-image: url('../gwu.png');
@@ -105,7 +104,7 @@ html, body {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 400px;
+  height: 500px;
   text-align: center;
   color: white;
   margin-top: -25px;
@@ -116,7 +115,7 @@ html, body {
 }
 .textArea {
 	width: 80%;
-	font-size: 18px;
+	font-size: 22px;
 }
 .roundImageContainer {
   margin: auto;
@@ -138,7 +137,7 @@ html, body {
   height: 130px;
   font-size: 18px;
   text-shadow: 2px 2px black;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Nunito', sans-serif;
   padding-top: 10px;
 }
 .keyServices {
@@ -147,33 +146,40 @@ html, body {
 .serviceSubtext {
 	font-size: 16px;
 	color: white;
-	font-family: 'ROBOTO', sans-serif;
+	text-shadow: 0px 0px black;
+	font-family: 'Nunito', sans-serif;
 }
 #customerQuotes {
   width: 100%;
   -webkit-box-shadow: 10px 15px 10px black;
   -moz-box-shadow: 10px 15px 10px black;
   box-shadow: 10px 15px 10px black;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#03a2d7+0,0e84a8+40,035f7d+100 */
-  background: rgb(3,162,215); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(3,162,215,1) 0%, rgba(14,132,168,1) 40%, rgba(3,95,125,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(3,162,215,1) 0%,rgba(14,132,168,1) 40%,rgba(3,95,125,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(3,162,215,1) 0%,rgba(14,132,168,1) 40%,rgba(3,95,125,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a2d7', endColorstr='#035f7d',GradientType=0 ); /* IE6-9 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#037adb+0,0e66aa+40,034881+100 */
+background: rgb(3,122,219); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(3,122,219,1) 0%, rgba(14,102,170,1) 40%, rgba(3,72,129,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(3,122,219,1) 0%,rgba(14,102,170,1) 40%,rgba(3,72,129,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(3,122,219,1) 0%,rgba(14,102,170,1) 40%,rgba(3,72,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#037adb', endColorstr='#034881',GradientType=0 ); /* IE6-9 */
+
+
+
   color: white;
   height: 200px;
   margin-bottom: 25px;
+  font-style: italic;
   text-align: center;
   font-size: 22px;
   text-shadow: 2px 2px gray;
 }
 .cyanGradient {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#03a2d7+0,0e84a8+40,035f7d+100 */
-    background: rgb(3,162,215); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(3,162,215,1) 0%, rgba(14,132,168,1) 40%, rgba(3,95,125,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(3,162,215,1) 0%,rgba(14,132,168,1) 40%,rgba(3,95,125,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(3,162,215,1) 0%,rgba(14,132,168,1) 40%,rgba(3,95,125,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a2d7', endColorstr='#035f7d',GradientType=0 ); /* IE6-9 */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#65befd+4,057acd+100 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0382dd+4,034c81+100 */
+background: rgb(3,130,221); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(3,130,221,1) 4%, rgba(3,76,129,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(3,130,221,1) 4%,rgba(3,76,129,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(3,130,221,1) 4%,rgba(3,76,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0382dd', endColorstr='#034c81',GradientType=0 ); /* IE6-9 */
+
 }
 .quote {
   padding-top: 50px;
@@ -184,12 +190,13 @@ strong {
 #mainHeader {
   font-family: 'Oswald', sans-serif;
   font-size: 80px;
-  padding-top: 250px;
+  padding-top: 200px;
   font-weight: bold;
   text-shadow: 4px 4px black;
 }
 #mainHeaderContainer {
   height: 100px;
+  margin-left: -80px;
   z-index: 8000;
 }
 h4 {
@@ -443,12 +450,19 @@ h4 {
         float: none;
         width: 100%;
       }
+      .mainLogo {
+      	margin-top: 0px;
+      	margin-right: 0px;
+      }
       .roundImageContainer {
         float: none;
         margin: auto;
       }
       .secondText {
         padding: 10px;
+      }
+      #mainHeaderContainer {
+      	margin-left: 0px;
       }
       .secContainer {
         padding-top: 15px;
