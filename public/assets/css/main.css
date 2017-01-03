@@ -12,6 +12,10 @@ html, body {
 	width: 100%;
 	height: 100%;
 }
+
+p {
+	font-family: 'Nunito', sans-serif;
+}
 .navbar {
 	min-width: 300px;
 }
@@ -87,7 +91,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
     text-align: center;
 }
 #landingView {
-  background-image: url('../landingbackground.jpg');
+  background-image: url('../Stevens-1.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
