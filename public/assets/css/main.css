@@ -89,6 +89,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
     text-shadow: 1px 1px gray;
     font-size: 12px;
     text-align: center;
+    border-width: 15px 0px 0px 0px;
+    border-style: groove;
+    border-color: rgb(20, 20, 20);
 }
 #landingView {
   background-image: url('../Stevens-1.jpg');
@@ -140,12 +143,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
   border-radius: 110px;
   margin-top: -55px;
   overflow: hidden;
-  border-style: solid;
+  border-style: ridge;
   border-color: #005795;
-  border-width: 10px;
+  border-width: 15px;
   -webkit-box-shadow: 10px 15px 10px black;
   -moz-box-shadow: 10px 15px 10px black;
   box-shadow: 10px 15px 10px black;
+}
+.upDownBorder {
+	border-width: 15px 0px 15px 0px;
+	border-style: ridge;
+	border-color: #005795;
 }
 .roundImageText {
   text-align: center;

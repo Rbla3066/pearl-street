@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Pearl Street LED Lighting Systems</title>
+  <title>LED Lighting Upgrade | Jets Atlantic Training Center | Pearl Street LED Lighting Systems</title>
 
   <link rel="icon" href="../assets/favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon"/>
@@ -37,7 +37,11 @@
 }
 .projectImage {
   height: 200px;
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;  
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
@@ -310,6 +314,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
+          $(this).fadeIn();
           $(this).addClass($(this).data("effect"));
         }
       });
@@ -330,6 +335,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
     $(document).ready(function(){
       console.log("done")
       $(".loadingPage").fadeOut("slow");
+      $(".scrollEffect").fadeOut();
     })
   </script>
 </body>
