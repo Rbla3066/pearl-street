@@ -13,4 +13,9 @@ module.exports = function(app){
 	app.get('/projects', function(req, res){
 		res.sendFile(path.join(__dirname + '/../public/projects.html'));
 	});
+	app.get('/projects/:project', function(req, res){
+		var project = req.params.project;
+		res.sendFile(path.join(__dirname + '/../public/projects-'+project+'.html'));
+	});
+
 };
