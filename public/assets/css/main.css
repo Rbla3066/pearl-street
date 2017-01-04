@@ -93,11 +93,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
 #landingView {
   background-image: url('../Stevens-1.jpg');
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -o-background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
+  -webkit-background-position: center;
+  -moz-background-position: center;
+  -o-background-position: center;
   width: 100%;
   min-height: 550px;
   text-align: center;
