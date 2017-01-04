@@ -114,7 +114,7 @@
 <div class="container-fluid" style="padding-top: 50px; background-color: lightgray">
   <div class="row blackGradient">
     <div class="col-md-12">
-      <div class="projectDescription" style="height: 100%">
+      <div class="projectDescription fadeIn" style="height: 100%">
         <div>
           <div class="secHeaderContainer">
             <h2 class="secondaryHeader">JETS ATLANTIC TRAINING CENTER</h2>
@@ -183,7 +183,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
     </div>
   </div>
   <div class="row blackGradient" style="padding-bottom: 25px; padding-top: 25px">
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader active">JETS ATLANTIC TRAINING CENTER</h2>
         </div>
@@ -191,7 +191,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
           <img src="../assets/logos/jetslogo.png" class="projectLogo">
         </div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">PRINCETON UNIVERSITY</h2>
@@ -202,7 +202,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
       </a>
     </div>
     <div class="clearfix visible-sm-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInRight">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">JFK MEDICAL CENTER</h2>
@@ -213,7 +213,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
       </a>
     </div>
     <div class="clearfix visible-md-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">QUINNIPIAC UNIVERSITY</h2>
@@ -224,7 +224,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
       </a>
     </div>
     <div class="clearfix visible-sm-block"></div>
-   <div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">CRYSTAL AUTO MALL</h2>
@@ -234,7 +234,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
         </div>
       </a>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInRight">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">FLEMINGTON CAR & TRUCK COUNTRY</h2>
@@ -315,6 +315,11 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
       });
     });
 
+    $(".projectLogo").on("mouseover", function(){
+      this.style = "transform: scale(1.2);"
+    }).on("mouseleave", function(){
+      this.style = "transform: scale(1);"
+    })
    
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")

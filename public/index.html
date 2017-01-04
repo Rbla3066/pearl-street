@@ -215,9 +215,9 @@ $.fn.isOnScreen = function(){
     $(window).scroll(function(){
       if(mobile) return;
       $(".scrollEffect").map(function(){
-        console.log("hit");
         if($(this).data("in-view") != "true" && $(this).isOnScreen()){
           $(this).data("in-view", "true")
+          $(this).fadeIn();
           $(this).addClass($(this).data("effect"));
         }
       });
@@ -250,6 +250,7 @@ $.fn.isOnScreen = function(){
     $(document).ready(function(){
       console.log("done")
       $(".loadingPage").fadeOut("slow");
+      $(".scrollEffect").fadeOut();
     })
   //  $(".hoverExpand").on("mouseover", function(){
   //    $(this).addClass("expanded");

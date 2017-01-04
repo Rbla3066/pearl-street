@@ -101,7 +101,7 @@
 
 <div class="container-fluid" style="padding-top: 50px; background-color: lightgray">
   <div class="row">
-      <div id="landingView" style="background-image: url('assets/pingry.jpg'); min-height: 250px"></div>
+      <div id="landingView" style="background-image: url('assets/Pingry-1.jpg'); min-height: 250px"></div>
   </div>
   <div class="row cyanGradient">
     <div class="col-md-12">
@@ -114,66 +114,66 @@
     </div>
   </div>
   <div class="row blackGradient" style="padding-bottom: 25px; padding-top: 25px">
-    <div class="col-md-4 col-sm-6 col-xs-12">
-      <a href="projects/jets">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
+      <a href="/projects/jets">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">JETS ATLANTIC TRAINING CENTER</h2>
         </div>
         <div class="projectImage">
-          <img src="assets/logos/jetslogo.png" class="projectLogo">
+          <img src="../assets/logos/jetslogo.png" class="projectLogo">
         </div>
       </a>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">PRINCETON UNIVERSITY</h2>
         </div>
         <div class="projectImage">
-          <img src="assets/logos/princeton_shield.png" class="projectLogo">
+          <img src="../assets/logos/princeton_shield.png" class="projectLogo">
         </div>
       </a>
     </div>
     <div class="clearfix visible-sm-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInRight">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">JFK MEDICAL CENTER</h2>
         </div>
         <div class="projectImage">
-          <img src="assets/logos/jfk_square.png" class="projectLogo">
+          <img src="../assets/logos/jfk_square.png" class="projectLogo">
         </div>
       </a>
     </div>
     <div class="clearfix visible-md-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">QUINNIPIAC UNIVERSITY</h2>
         </div>
         <div class="projectImage">
-          <img src="assets/logos/quinnipiac.png" class="projectLogo">
+          <img src="../assets/logos/quinnipiac.png" class="projectLogo">
         </div>
       </a>
     </div>
     <div class="clearfix visible-sm-block"></div>
-   <div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">CRYSTAL AUTO MALL</h2>
         </div>
         <div class="projectImage">
-          <img src="assets/logos/crystalautomall.png" class="projectLogo">
+          <img src="../assets/logos/crystalautomall.png" class="projectLogo">
         </div>
       </a>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInRight">
       <a href="#">
         <div class="secHeaderContainer">
           <h2 class="secondaryHeader">FLEMINGTON CAR & TRUCK COUNTRY</h2>
         </div>
         <div class="projectImage">
-          <img src="assets/logos/flemington_car.png" class="projectLogo">
+          <img src="../assets/logos/flemington_car.png" class="projectLogo">
         </div>
       </a>
     </div>
@@ -243,12 +243,18 @@
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
+          $(this).fadeIn()
           $(this).addClass($(this).data("effect"));
         }
       });
     });
 
-    
+    $(".projectLogo").on("mouseover", function(){
+      this.style = "transform: scale(1.2);"
+    }).on("mouseleave", function(){
+      this.style = "transform: scale(1);"
+    })
+
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")
     });
@@ -258,6 +264,7 @@
     $(document).ready(function(){
       console.log("done")
       $(".loadingPage").fadeOut("slow");
+      $(".scrollEffect").fadeOut();
     })
   </script>
 </body>
