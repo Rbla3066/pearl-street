@@ -94,7 +94,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
     border-color: rgb(20, 20, 20);
 }
 #landingView {
-  background-image: url('../Stevens-1.jpg');
+  background-image: url('../landingbackground.jpg');
   background-attachment: fixed;
   -webkit-background-attachment: fixed;
   -moz-background-attachment: fixed;
@@ -166,6 +166,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
 }
 .keyServices {
   padding-bottom: 25px;
+}
+.topBlackBorder {
+  border-style: groove;
+  border-width: 10px 0px 0px 0px;
+  border-color: rgb(20, 20, 20);
 }
 .serviceSubtext {
 	font-size: 16px;

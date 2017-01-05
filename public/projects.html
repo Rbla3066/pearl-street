@@ -107,7 +107,7 @@
   <div class="row">
       <div id="landingView" style="background-image: url('assets/Pingry-1.jpg'); min-height: 250px"></div>
   </div>
-  <div class="row cyanGradient">
+  <div class="row cyanGradient upDownBorder">
     <div class="col-md-12">
       <div class="contentArea" style="height: 400px">
         <div>
@@ -247,7 +247,6 @@
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
-          $(this).fadeIn()
           $(this).addClass($(this).data("effect"));
         }
       });
@@ -267,7 +266,6 @@
     $(document).ready(function(){
       console.log("done")
       $(".loadingPage").fadeOut("slow");
-      $(".scrollEffect").fadeOut();
     })
   </script>
 </body>
