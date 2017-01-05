@@ -146,10 +146,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
   overflow: hidden;
   border-style: ridge;
   border-color: #005795;
-  border-width: 15px;
+  border-width: 10px;
   -webkit-box-shadow: 10px 15px 10px black;
   -moz-box-shadow: 10px 15px 10px black;
   box-shadow: 10px 15px 10px black;
+}
+.projectsList {
+	min-height: 400px
 }
 .upDownBorder {
 	border-width: 15px 0px 15px 0px;
