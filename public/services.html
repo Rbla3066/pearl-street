@@ -89,8 +89,8 @@
   <div class="row cyanGradient upDownBorder">
     <div class="col-md-12 contentArea" style="background-image: none;">
       <div>
-        <div id="mainHeader" style="color: white; text-align: center; padding-top: 0px;">
-          <h1 style="font-size: 42px">SERVICES</h1>
+        <div class="mainHeader">
+          <h1>SERVICES</h1>
         </div>
       <p style="color: white; font-size: 24px; text-shadow: 2px 2px gray">Pearl Street Systems service offerings cover the entire lighting efficiency upgrade process, beginning with initial assessments through project implementation and financing. Customers can select from a single service, combination of services or turnkey project delivery.</p>
       </div>
@@ -215,10 +215,6 @@
 </script>
   <script type="text/javascript">
     var navLogo = $(".navbar-brand");
-    var mobile = false;
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        mobile = true;
-      }
 
 
 $.fn.isOnScreen = function(){
@@ -242,11 +238,8 @@ $.fn.isOnScreen = function(){
 
     var header = $("#mainHeaderContainer");
     $(window).scroll(function(){
-      if(mobile) return;
       $(".scrollEffect").map(function(){
-        console.log("hit");
-        if($(this).data("in-view") != "true" && $(this).isOnScreen()){
-          $(this).data("in-view", "true")
+        if($(this).isOnScreen()){
           $(this).addClass($(this).data("effect"));
         }
       });
@@ -254,22 +247,14 @@ $.fn.isOnScreen = function(){
     });
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")
-    });
-    $(".socialImg").on("mouseleave", function(){
+    }).on("mouseleave", function(){
       $(this).attr("style", "transform: scale(1)")
     });
     $(document).ready(function(){
       console.log("done")
       $(".loadingPage").fadeOut("slow");
     })
-  //  $(".hoverExpand").on("mouseover", function(){
-  //    $(this).addClass("expanded");
-  //    $(this).removeClass("shrink");
-  //  });
-  //  $(".hoverExpand").on("mouseleave", function(){
-  //    $(this).removeClass("expanded");
-  //    $(this).addClass("shrink");
-  //  });
+
   </script>
 </body>
 </html>
