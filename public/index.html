@@ -134,21 +134,37 @@
   </div>
   <div class="row">
     <div id="footer" class="col-md-12 blackGradient">
+      <div class="dropup pull-left">
+        <button class="btn btn-primary dropdown-toggle pull-left" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 15px; margin-bottom: 15px; font-size: 20px;"> Links
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu blackGradient" aria-labelledby="dropdownMenu2" style="left: 0">
+          <li><a href="https://www.linkedin.com/company/pearl-street-led-lighting-systems"><img class="socialImg" src="http://icons.iconarchive.com/icons/martz90/circle/512/linkedin-icon.png"></a></li>
+          <li><a href="http://www.yellowpages.com/somerville-nj/mip/pearl-street-led-lighting-systems-505530911"><img class="socialImg" src="https://lh4.ggpht.com/-C1kTX5bl4S7nyNWh6PFFX-WgqZTz7DIc3ZaBZiPlv8-SH0bw4aQuKceTQPoLfq_Pwlw=w300"></a></li>
+          <li><a href="http://www.usgbc.org/organizations/pearl-street-led-lighting-systems"><img class="socialImg" src="assets/logos/green_building_council.png"></a></li>
+          <li><a href="https://www.energystar.gov/"><img class="socialImg" src="https://www.cyberpower.com/images/icon_energy-star_s.png"></a></li>
+          <li><a href="https://plus.google.com/111049483642207487221"><img class="socialImg" src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Google-plus-icon.png"></a></li>
+          <li><a href="http://www.njcleanenergy.com/tradeally/disclaimer?path=/residential/tools-and-resources/tradeally/approved_vendorsearch/?vid=5919"><img class="socialImg" src="http://www.njcleanenergy.com/files/template_images/NJCEPBPU90.png"></a></li>
+        </ul>
+      </div>
         <div class="socialLogos">
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="http://icons.iconarchive.com/icons/martz90/circle/512/linkedin-icon.png"></a>
+            <a href="https://www.linkedin.com/company/pearl-street-led-lighting-systems"><img class="socialImg" src="http://icons.iconarchive.com/icons/martz90/circle/512/linkedin-icon.png"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="https://lh4.ggpht.com/-C1kTX5bl4S7nyNWh6PFFX-WgqZTz7DIc3ZaBZiPlv8-SH0bw4aQuKceTQPoLfq_Pwlw=w300"></a>
+            <a href="http://www.yellowpages.com/somerville-nj/mip/pearl-street-led-lighting-systems-505530911"><img class="socialImg" src="https://lh4.ggpht.com/-C1kTX5bl4S7nyNWh6PFFX-WgqZTz7DIc3ZaBZiPlv8-SH0bw4aQuKceTQPoLfq_Pwlw=w300"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="assets/logos/green_building_council.png"></a>
+            <a href="http://www.usgbc.org/organizations/pearl-street-led-lighting-systems"><img class="socialImg" src="assets/logos/green_building_council.png"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="https://www.cyberpower.com/images/icon_energy-star_s.png"></a>
+            <a href="https://www.energystar.gov/"><img class="socialImg" src="https://www.cyberpower.com/images/icon_energy-star_s.png"></a>
           </span>
           <span class="socialIcon">
-            <a href=""><img class="socialImg" src="http://www.njcleanenergy.com/files/template_images/NJCEPBPU90.png"></a>
+            <a href="https://plus.google.com/111049483642207487221"><img class="socialImg" src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Google-plus-icon.png"></a>
+          </span>
+          <span class="socialIcon">
+            <a href="http://www.njcleanenergy.com/tradeally/disclaimer?path=/residential/tools-and-resources/tradeally/approved_vendorsearch/?vid=5919"><img class="socialImg" src="http://www.njcleanenergy.com/files/template_images/NJCEPBPU90.png"></a>
           </span>
         </div>
         <p class="copyright">©COPYRIGHT  2016 Pearl Street Systems</p>
@@ -174,18 +190,18 @@
   </script>
   <script type="text/javascript">
     var navLogo = $(".navbar-brand");
-    var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Crystal Auto Mall'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}];
+    var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Crystal Auto Mall'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}, {quote: '"The finished product looks 1000% better than before..."', quotee: 'Quinnipiac University'}];
     var ind = 0;
     setInterval(function(){
       ind++;
-      if(ind == 3) ind = 0;
+      if(ind == 4) ind = 0;
       $("#quote1").fadeOut("slow", function(){
         $("#quoteContent").html(quotes[ind].quote);
         $("#quotee").html(quotes[ind].quotee);
         $("#quote1").fadeIn();
       })
       
-    }, 3000);
+    }, 3500);
 
 $.fn.isOnScreen = function(){
 
@@ -226,12 +242,6 @@ $.fn.isOnScreen = function(){
 
       }
 
-    });
-    $(".btn").on("mouseover", function(){
-      $(this).attr("style", "transform: scale(1.8)")
-    });
-    $(".btn").on("mouseleave", function(){
-      $(this).attr("style", "transform: scale(1.5)")
     });
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")

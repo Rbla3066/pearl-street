@@ -251,7 +251,7 @@ h4 {
 }
 .socialLogos {
 	margin: auto;
-	padding-top: 10px;
+	padding: 25px;
 }
 .socialIcon {
 	margin: 5px;
@@ -268,7 +268,9 @@ h4 {
 .carouselImg {
 	height: 300px;
 }
-
+.dropup {
+	display: none;
+}
 
 
 
@@ -515,6 +517,12 @@ h4 {
     		display: none;
     	}
     	.replacementImg2 {
+    		display: initial;
+    	}
+    	.socialLogos {
+    		display: none;
+    	}
+    	.dropup {
     		display: initial;
     	}
     }
