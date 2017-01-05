@@ -92,6 +92,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
     border-width: 15px 0px 0px 0px;
     border-style: groove;
     border-color: rgb(20, 20, 20);
+    min-height: 100px;
 }
 #landingView {
   background-image: url('../landingbackground.jpg');
