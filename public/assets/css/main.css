@@ -139,14 +139,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
 }
 .roundImageContainer {
   margin: auto;
-  width: 220px;
-  height: 220px;
-  border-radius: 110px;
-  margin-top: -55px;
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  margin-top: -75px;
   overflow: hidden;
   border-style: ridge;
   border-color: #005795;
-  border-width: 10px;
+  border-width: 15px;
   -webkit-box-shadow: 10px 15px 10px black;
   -moz-box-shadow: 10px 15px 10px black;
   box-shadow: 10px 15px 10px black;
@@ -173,8 +173,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
 }
 .topBlackBorder {
   border-style: groove;
-  border-width: 10px 0px 0px 0px;
-  border-color: rgb(20, 20, 20);
+  border-width: 15px 0px 0px 0px;
+  border-color: #005795;
 }
 .serviceSubtext {
 	font-size: 16px;
@@ -530,7 +530,7 @@ h4 {
     		display: initial;
     	}
     }
-    @media screen and (max-width: 495px) {
+    @media screen and (max-width: 555px) {
       .roundImageText {
         float: none;
         width: 100%;
