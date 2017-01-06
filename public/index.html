@@ -112,7 +112,7 @@
         <img id="imgThree" data-initial="assets/pingry.jpg" data-hover="/assets/gmc-3.jpg" class="hoverExpand altImage" src="assets/pingry.jpg">
       </div>
       <div data-effect="bounceInRight" class="roundImageText scrollEffect secondText">
-        <p class="keyService" style="margin-top: 10px">FLEXIBLE PROJECT FINANCING</p>
+        <p class="keyService">FLEXIBLE PROJECT FINANCING</p>
         <p class="serviceSubtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod commodo lectus, quis tincidunt libero iaculis vel.</p>
       </div>
     </div>
@@ -253,22 +253,21 @@ $.fn.isOnScreen = function(){
       $(this).attr("style", "transform: scale(1)")
     });
     $(document).ready(function(){
-      console.log("done")
       $(".loadingPage").fadeOut("slow");
       $(".roundImageContainer").on("mouseover", function(){
         this.style = "border-style: groove;";
         var target = $($(this).data("target"));
-        target.animate({opacity: "0"}, 500, function(){
+        target.animate({opacity: "0"}, 300, function(){
           target.attr("src", target.data("hover"));
-          target.animate({opacity: "1"}, 500)
+          target.animate({opacity: "1"}, 300)
         })
       }).on("mouseleave", function(){
         this.style = "";
         var target = $($(this).data("target"));
-        target.animate({opacity: "0"}, {complete: function(){
+        target.animate({opacity: "0"}, 300, function(){
           target.attr("src", target.data("initial"));
-          target.animate({opacity: "1"})
-        }})
+          target.animate({opacity: "1"}, 300)
+        })
       })
     })
 
