@@ -26,16 +26,37 @@
   <style type="text/css">
     .hoverExpand {
       width: 150%;
-      margin-left: -60px;
+      margin-left: -80px;
     }
     .roundImageContainer {
       margin-bottom: 25px;
-      width: 300px;
-      height: 300px;
-      border-radius: 150px;
+      width: 350px;
+      height: 350px;
+      border-radius: 175px;
     }
     .roundImageContainer:hover {
       border-style: groove;
+    }
+    @media screen and (max-width: 991px){
+      .secHeaderContainer {
+        margin-left: 100px;
+      }
+      .container2 {
+        padding-top: 50px;
+      }
+      .roundImageContainer {
+        margin-right: 25px;
+      }
+    }
+    @media screen and (max-width: 720px){
+      .roundImageContainer {
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+      }
+      .hoverExpand {
+        margin-left: -60px;
+      }
     }
   </style>
  
@@ -114,7 +135,7 @@
       </p>
       </div>
     </div>
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-6 col-lg-6 container2">
       <div data-effect="bounceInLeft" class="contentBox">
       <div class="roundImageContainer" data-target="#imgOne" id="topCircle">
           <img id="imgOne" data-initial="/assets/Merck-2.jpg" data-hover="/assets/dji-1.jpg" class="hoverExpand" src="/assets/Jets.jpg">
