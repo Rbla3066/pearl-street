@@ -24,42 +24,24 @@
 
   <link rel="stylesheet" href="assets/css/main.css">
   <style type="text/css">
-.projectDescription {
-  height: 50px;
-  width: 100%;
-  margin-top: -50px;
-  text-align: center;
-  color: white;
-  border-radius: 0px 0px 10px 10px;
-}
-.projectContainer {
-  background-image: url('../Jets.jpg');
-  margin-top: 25px;
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  background-position: fixed;
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  border-radius: 10px 10px 0px 0px;
-}
-.projectLogo {
-  max-height: 175px;
-  max-width: 90%;
-}
-.projectImage {
-  height: 200px;
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;  
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
-  padding-bottom: 15px;
-}
+    #map {
+      height: 350px;
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 90%;
+    }
+    #map2 {
+      height: 350px;
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 90%;
+    }
+    .contactBody {
+      color: white;
+      font-size: 16px;
+    }
   </style>
   
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -117,8 +99,85 @@
       </div>
     </div>
   </div>
-  <div class="row blackGradient">
-    
+  <div class="row blackGradient contactBody">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+          <address>
+        <br>
+        Pearl Street LED Lighting Systems<br>
+        7 Commerce Street, Suite 3<br>
+        Somerville, NJ 08876
+          </address>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <a href="http://maps.google.com/?q=7 Commerce Street, Suite 3 Somerville, NJ 08876">
+        <br><br><span class="glyphicon glyphicon-share-alt"></span> Get Directions
+        </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+          <address>
+        <br>
+        347 W 36th Street, Suite 204<br>
+        New York, NY 10018
+          </address>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <a href="http://maps.google.com/?q=347 W 36th Street, Suite 204 New York, NY 10018">
+        <br><span class="glyphicon glyphicon-share-alt"></span> Get Directions
+        </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+          <p><br>Phone:&nbsp 908.923.4150 <br>
+          Fax: &nbsp&nbsp&nbsp&nbsp 908.823.4869</p>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <br><a href="tel:1-908-923-4150"><span class="glyphicon glyphicon-earphone"></span> Call Us</a> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 col-sm-5 col-xs-5">
+          <br>General Information: <br>
+          Sales Inquiries: <br>
+          Career Opportunities:  
+        </div>
+        <div class="col-md-7 col-sm-7 col-xs-7">
+          <br>
+          <a href="mailto:info@pearlstreetled.com"><span class="glyphicon glyphicon-envelope"></span> info@pearlstreetled.com</a><br>
+          <a href="mailto:sales@pearlstreetled.com"><span class="glyphicon glyphicon-envelope"></span> sales@pearlstreetled.com</a><br>
+          <a href="mailto:careers@pearlstreetled.com"><span class="glyphicon glyphicon-envelope"></span> careers@pearlstreetled.com</a> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <br>
+          <h4>Contact Form</h4>
+          <form>
+            <div class="form-group">
+              <label for="nameInput">Name / Title / Company</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Email</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="example@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="messageInput">Message</label>
+              <textarea rows="3" type="text" class="form-control" id="messageInput" placeholder="Enter Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span> Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div id="map"></div>
+      <div id="map2"></div>
+    </div>
   </div>
   <div class="row">
     <div id="footer" class="col-md-12 blackGradient">
@@ -221,6 +280,30 @@
       console.log("done")
       $(".loadingPage").fadeOut("slow");
     })
+
+    function initMap() {
+        var uluru = {lat: 40.6060610, lng: -74.7277570};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+        var uluru2 = {lat: 40.7544680, lng: -73.9943890};
+        var map2 = new google.maps.Map(document.getElementById('map2'), {
+          zoom: 12,
+          center: uluru2
+        });
+        var marker = new google.maps.Marker({
+          position: uluru2,
+          map: map2
+        });
+      }
   </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp3O-N7gVQWiGYWJC9CpaRtAq7HaTOaTA&callback=initMap">
+    </script>
 </body>
 </html>

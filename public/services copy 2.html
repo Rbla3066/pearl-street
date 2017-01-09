@@ -48,16 +48,19 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="turnkeyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h4>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-       <p>Our “turnkey” design-build offering affords single-source accountability for total project success.  Pearl Street Systems provides design services, equipment supply, installation (through our network of licensed electrical contractors), controls system commissioning and performance validation.</p>
-        <p>Pearl Street Systems is partnered with several leading commercial banks to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all the savings.</p>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -159,10 +162,13 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer" onclick="modal('#turnkey')" data-toggle="modal" data-target="#turnkeyModal">
+      <div class="secHeaderContainer" onclick="modal('#turnkey')" data-toggle="modal" data-target="#myModal">
         <h2 class="secondaryHeader">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h2>
       </div>
-      
+      <div class="contentBox" id="turnkey">
+        <p>Our “turnkey” design-build offering affords single-source accountability for total project success.  Pearl Street Systems provides design services, equipment supply, installation (through our network of licensed electrical contractors), controls system commissioning and performance validation.</p>
+        <p>Pearl Street Systems is partnered with several leading commercial banks to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all the savings.</p>
+      </div>
     </div>
   </div>
   <div class="row cyanGradient upDownBorder" style="padding: 15px 0px 15px 0px">

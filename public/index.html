@@ -90,7 +90,7 @@
   </div>
   <div class="row blackGradient keyServices topBlackBorder">
     <div class="col-md-4 keyServiceContainer">
-      <div class="roundImageContainer" data-target="#imgOne" id="topCircle">
+      <div class="roundImageContainer" data-target="#imgOne" id="topCircle" style="overflow: hidden">
         <img id="imgOne" data-initial="/assets/stevens2.jpg" data-hover="/assets/dji-1.jpg" class="hoverExpand" src="assets/stevens2.jpg" style="height: 100%">
       </div>
       <div data-effect="bounceInLeft" class="roundImageText scrollEffect">
@@ -99,7 +99,7 @@
       </div>
     </div>
     <div class="col-md-4 keyServiceContainer secContainer">
-      <div class="roundImageContainer" data-target="#imgTwo">
+      <div class="roundImageContainer" style="overflow: hidden" data-target="#imgTwo">
         <img id="imgTwo" data-initial="/assets/gymnasium.jpg" data-hover="/assets/wardlaw-1.jpg" class="hoverExpand" src="/assets/gymnasium.jpg">
       </div>
       <div data-effect="bounceInBottom" class="roundImageText scrollEffect secondText">
@@ -108,7 +108,7 @@
       </div>
     </div>
     <div class="col-md-4 keyServiceContainer secContainer">
-      <div class="roundImageContainer" data-target="#imgThree">
+      <div class="roundImageContainer" style="overflow: hidden" data-target="#imgThree">
         <img id="imgThree" data-initial="assets/pingry.jpg" data-hover="/assets/gmc-3.jpg" class="hoverExpand altImage" src="assets/pingry.jpg">
       </div>
       <div data-effect="bounceInRight" class="roundImageText scrollEffect secondText">
@@ -248,8 +248,7 @@ $.fn.isOnScreen = function(){
     });
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")
-    });
-    $(".socialImg").on("mouseleave", function(){
+    }).on("mouseleave", function(){
       $(this).attr("style", "transform: scale(1)")
     });
     $(document).ready(function(){
