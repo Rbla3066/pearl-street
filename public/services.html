@@ -47,21 +47,6 @@
 <body>
 
 
-<!-- Modal -->
-<div class="modal fade" id="turnkeyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h4>
-      </div>
-      <div class="modal-body">
-       <p>Our “turnkey” design-build offering affords single-source accountability for total project success.  Pearl Street Systems provides design services, equipment supply, installation (through our network of licensed electrical contractors), controls system commissioning and performance validation.</p>
-        <p>Pearl Street Systems is partnered with several leading commercial banks to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all the savings.</p>
-      </div>
-    </div>
-  </div>
-</div>
 <div style="position: absolute; top: 50px; width: 100%; height: 3200px; background-color: white; z-index: 9999" class="loadingPage">
   <div style="width: 400px; margin: auto; margin-top: 50px" class="loadingGif">
       <img style="width: 395px" src="/assets/logos/loading.gif">
@@ -97,12 +82,7 @@
 </nav>
 
 <div class="container-fluid">
-
-  <div class="row">
-    <div id="landingView" style="background-image: url('assets/roche-drawing.jpg'); min-height: 200px; margin-top: 50px;">
-    </div>
-  </div>
-  <div class="row cyanGradient upDownBorder" style="text-align: center;">
+  <div class="row cyanGradient upDownBorder" style="text-align: center; margin-top: 50px">
     <div class="col-md-7 col-sm-7 col-xs-12" style="padding: 15px;">
       <div class="mainHeader">
         <h1>SERVICES</h1>
@@ -113,7 +93,11 @@
       <img src="assets/gmc-4.jpg" style="width: 100%;">
     </div>
   </div>
-  <div class="row blackGradient" style="padding-top: 50px">
+  <div class="row">
+    <div id="landingView" style="background-image: url('assets/roche-drawing.jpg'); min-height: 200px;">
+    </div>
+  </div>
+  <div class="row blackGradient topBlackBorder" style="padding-top: 50px;">
     <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
       <div class="secHeaderContainer">
         <h2 class="secondaryHeader">LIGHTING UPGRADE ASSESMENTS AND MASTER PLAN STUDIES</h2>
@@ -159,10 +143,13 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer" onclick="modal('#turnkey')" data-toggle="modal" data-target="#turnkeyModal">
+      <div class="secHeaderContainer" onclick="modal('#turnkey')" data-toggle="modal" data-target="#myModal">
         <h2 class="secondaryHeader">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h2>
       </div>
-      
+      <div class="contentBox" id="turnkey">
+        <p>Our “turnkey” design-build offering affords single-source accountability for total project success.  Pearl Street Systems provides design services, equipment supply, installation (through our network of licensed electrical contractors), controls system commissioning and performance validation.</p>
+        <p>Pearl Street Systems is partnered with several leading commercial banks to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all the savings.</p>
+      </div>
     </div>
   </div>
   <div class="row cyanGradient upDownBorder" style="padding: 15px 0px 15px 0px">

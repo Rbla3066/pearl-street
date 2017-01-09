@@ -256,17 +256,11 @@ $.fn.isOnScreen = function(){
       $(".roundImageContainer").on("mouseover", function(){
         this.style = "border-style: groove;";
         var target = $($(this).data("target"));
-        target.animate({opacity: "0"}, 300, function(){
-          target.attr("src", target.data("hover"));
-          target.animate({opacity: "1"}, 300)
-        })
+        target.attr("src", target.data("hover"));
       }).on("mouseleave", function(){
         this.style = "";
         var target = $($(this).data("target"));
-        target.animate({opacity: "0"}, 300, function(){
-          target.attr("src", target.data("initial"));
-          target.animate({opacity: "1"}, 300)
-        })
+        target.attr("src", target.data("initial"));
       })
     })
 
