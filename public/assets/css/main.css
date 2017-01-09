@@ -282,6 +282,11 @@ h4 {
 .dropup {
 	display: none;
 }
+.headerImage {
+	min-height: 250px;
+	width: 100%;
+	background-size: cover;
+}
 
 
 

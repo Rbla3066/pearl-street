@@ -45,7 +45,7 @@
     .contactForm {
       border-radius: 10px;
       padding: 10px;
-      margin-top: 10px;
+      margin: 10px 0px 10px 0px;
     }
     .contactHeader {
       color: black;
@@ -106,8 +106,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-      <div id="landingView" style="background-image: url('assets/Stevens-1.jpg'); min-height: 250px"></div>
+  <div class="row" style="margin-top: -50px">
+      <div class="headerImage" style="background-image: url('assets/Stevens-1.jpg'); min-height: 250px"></div>
   </div>
   <div class="row blackGradient contactBody topBlackBorder">
     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -178,7 +178,7 @@
               <label for="messageInput">Message</label>
               <textarea rows="3" type="text" class="form-control" id="messageInput" placeholder="Enter Message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span> Send</button>
+            <button type="submit" id="sendEmail" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span> Send</button>
           </form>
         </div>
       </div>
@@ -310,6 +310,16 @@
           map: map2
         });
       }
+
+    $("#sendEmail").click(function(){
+      var name = $("#nameInput").val();
+      var email = $("#emailInput").val();
+      var message = $("#messageInput").val();
+      $.get('/api/contact/'+name+'/'+email+'/'+message, function(response){
+        console.log(response);
+      })
+      return false;
+    })
   </script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp3O-N7gVQWiGYWJC9CpaRtAq7HaTOaTA&callback=initMap">

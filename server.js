@@ -15,6 +15,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static(path.join(__dirname+'/public')));
 
 require('./routes/html-routes.js')(app);
+require('./routes/api-routes.js')(app);
 
 app.listen(PORT, function() {
 	console.log("Server listening on PORT: " + PORT);
