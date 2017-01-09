@@ -23,7 +23,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
   <link rel="stylesheet" href="assets/css/main.css">
-  
+  <style type="text/css">
+    .hoverExpand {
+      width: 150%;
+      margin-left: -60px;
+    }
+    .roundImageContainer {
+      margin-bottom: 25px;
+      width: 300px;
+      height: 300px;
+      border-radius: 150px;
+    }
+    .roundImageContainer:hover {
+      border-style: groove;
+    }
+  </style>
  
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="description" content="Pearl Street Systems provides LED lighting upgrades, retrofits, audits, consulting, engineering, and design services across New Jersey and New York."/>
@@ -66,27 +80,30 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container-fluid">
-  <div class="row cyanGradient upDownBorder" style="text-align: center; margin-top: 50px">
+<div class="container-fluid" style="margin-top: 50px">
+  <div class="row">
+    <div class="headerImage" style="background-image: url('/assets/GWU-4.jpg'); min-height: 300px">
+    </div>
+  </div>
+  <div class="row cyanGradient upDownBorder" style="text-align: center;">
     <div class="mainHeader">
        <h1>ABOUT US </h1>
     </div>
   </div>
-  <div class="row">
-    <div class="headerImage" style="background-image: url('assets/led-lamp.jpg');">
-    </div>
-  </div>
-  <div class="row blackGradient topBlackBorder" style="padding-top: 15px">
+  <div class="row blackGradient" style="padding-top: 15px">
     <div class="col-md-6 col-lg-6">
-      <div data-effect="bounceInLeft" class="contentBox">
-      <div class="secHeaderContainer">
-      <h2 class="secondaryHeader">WELCOME TO PEARL STREET</h2>
-      </div>
+      <div class="contentBox">
+        <div class="roundImageContainer" data-target="#imgOne" id="topCircle">
+          <img id="imgOne" data-initial="/assets/Merck-2.jpg" data-hover="/assets/dji-1.jpg" class="hoverExpand" src="/assets/Merck-2.jpg">
+        </div>
+        <div class="secHeaderContainer">
+          <h2 class="secondaryHeader">WELCOME TO PEARL STREET</h2>
+        </div>
       
-      <p style="margin-top: 20px">
+        <p style="margin-top: 20px">
         <strong>Pearl Street Systems</strong> is a leading systems integrator and professional services provider of commercial and industrial LED lighting upgrades. With a skilled and experienced staff whose only focus is LED lighting upgrades, <strong>Pearl Street</strong> develops and implements custom engineered solutions that deliver measurable long-term value.
-      </p>
-      <p>
+        </p>
+        <p>
         If you’re reading through this website, you have demonstrated an interest in LED lighting technology and upgrades.  But LED lighting almost sounds too good to be true because LEDs seem to "do it all" by reducing energy costs, virtually eliminating lighting maintenance and improving the quality of lighting.  So where is the catch and what are the potential risks with an LED lighting upgrade?  Well the catch is that it first has to be cost effective and provide an acceptable financial return first.  And the risks are that the upgrade does not provide the forecasted savings, is not as reliable and maintenance free as promised, or just doesn’t look as good as you had hoped.  With an LED upgrade you are making a 15+ year commitment to the design – if you are successful great, if not you are going to live with the poor results and the constant complaints from the building occupants for a very long time.  Even with a really bad upgrade result, it will be difficult to economically justify a future lighting upgrade (because there just isn’t much more energy left to save).
       </p>
       <p>
@@ -95,15 +112,16 @@
       <p>
         <strong>Pearl Street Systems</strong> is one of the largest LED lighting system integrators and professional service providers in the Northeast.  We have an impressive list of satisfied customers who have one thing in common:  they demand high quality, professionalism and measurable value.  We encourage you to contact us at <strong>(info@pearlstreetled.com)</strong> us to learn more about our capabilities, project success stories and what we can do for you.
       </p>
-      <img src="assets/Merck-2.jpg" class="img-responsive" style="margin: auto;">
       </div>
     </div>
     <div class="col-md-6 col-lg-6">
       <div data-effect="bounceInLeft" class="contentBox">
+      <div class="roundImageContainer" data-target="#imgOne" id="topCircle">
+          <img id="imgOne" data-initial="/assets/Merck-2.jpg" data-hover="/assets/dji-1.jpg" class="hoverExpand" src="/assets/Jets.jpg">
+        </div>
       <div class="secHeaderContainer">
       <h2 class="secondaryHeader">MEASURABLE VALUE WITH EVERY PROJECT</h2>
       </div>
-      <img src="assets/Jets.jpg" class="img-responsive" style="margin: auto;">
       <p style="margin-top: 20px">
         <strong>Pearl Street Systems</strong> delivers value through a comprehensive “end to end” approach, beginning with initial program/project screenings, master plan studies, investment grade lighting audits, detailed project designs, project delivery, performance validation and project financing. Our approach consistently delivers LED lighting upgrades that yield the greatest energy savings, highest dependability and longest life.
       </p>
@@ -218,22 +236,14 @@ $.fn.isOnScreen = function(){
     });
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")
-    });
-    $(".socialImg").on("mouseleave", function(){
+    }).on("mouseleave", function(){
       $(this).attr("style", "transform: scale(1)")
     });
     $(document).ready(function(){
       console.log("done")
       $(".loadingPage").fadeOut("slow");
     })
-  //  $(".hoverExpand").on("mouseover", function(){
-  //    $(this).addClass("expanded");
-  //    $(this).removeClass("shrink");
-  //  });
-  //  $(".hoverExpand").on("mouseleave", function(){
-  //    $(this).removeClass("expanded");
-  //    $(this).addClass("shrink");
-  //  });
+
   </script>
 </body>
 </html>

@@ -26,6 +26,43 @@
     .contentArea {
       height: 375px;
     }
+    .closeButton {
+      background-color: transparent;
+      color: white;
+      font-size: 32px;
+    }
+    .closeButton:hover {
+      color: gray;
+      cursor: pointer;
+    }
+    .secHeaderContainer {
+      margin-top: 10px;
+    }
+    .secHeaderContainer:hover {
+      cursor: pointer;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+    .modal-content {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#035fab+0,0b5187+40,023966+100 */
+  background: rgb(3,95,171); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(3,95,171,1) 0%, rgba(11,81,135,1) 40%, rgba(2,57,102,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(3,95,171,1) 0%,rgba(11,81,135,1) 40%,rgba(2,57,102,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(3,95,171,1) 0%,rgba(11,81,135,1) 40%,rgba(2,57,102,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', endColorstr='#023966',GradientType=0 ); /* IE6-9 */
+    }
+    .modal-title {
+      font-size: 24px;
+      color: white;
+      text-shadow: 2px 2px gray;
+    }
+    .modal-body {
+      color: white;
+      font-size: 18px;
+    }
+    strong {
+      color: black;
+    }
     @media screen and (max-width: 430px){
       .contentArea {
         height: 450px;
@@ -46,7 +83,92 @@
 </head>
 <body>
 
-
+<!-- Modal -->
+<div class="modal fade" id="turnkeyModal" tabindex="-1" role="dialog" aria-labelledby="turnKeyTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="closeButton pull-right" data-dismiss="modal" aria-label="Close">&times</div>
+        <h4 class="modal-title" id="turnKeyTitle">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h4>
+      </div>
+      <div class="modal-body">
+        <p>Our “turnkey” design-build offering affords single-source accountability for total project success.  Pearl Street Systems provides design services, equipment supply, installation (through our network of licensed electrical contractors), controls system commissioning and performance validation.</p>
+        <p>Pearl Street Systems is partnered with several leading commercial banks to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all the savings.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="equipmentModal" tabindex="-1" role="dialog" aria-labelledby="equipmentTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="closeButton pull-right" data-dismiss="modal" aria-label="Close">&times</div>
+        <h4 class="modal-title" id="equipmentTitle">LIGHTING EQUIPMENT SUPPLY</h4>
+      </div>
+      <div class="modal-body">
+        <p><strong>Pearl Street Systems</strong> is one of the largest LED equipment suppliers in the Northeast; purchasing tens of thousands of LED fixtures, upgrade kits and lamps annually.  This means we have close vendor relationships and obtain very competitive pricing.  <strong>Pearl Street </strong>utilizes LED equipment from top tier manufacturers that are both financially stable and will be in business long-term to support equipment warranties.  Our engineering team continually validates new LED equipment entering the marketplace before we specify them in our customer designs and projects.</p>
+        <p>With <strong>Pearl Street’s</strong> design-supply offering, end-customers and contractors utilize our lighting design capabilities and experience to optimize their purchase and achieve the lowest life-cycle cost of ownership, correct lighting problems, meet codes and compliance, etc. And customers can use their preferred contractor or internal labor workforce for project installation, reducing overall costs.  To ensure project success, <strong>Pearl Street</strong> provides the necessary installation drawings, installer training, quality control program, system commissioning and performance validation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="consultingModal" tabindex="-1" role="dialog" aria-labelledby="consultingTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="closeButton pull-right" data-dismiss="modal" aria-label="Close">&times</div>
+        <h4 class="modal-title" id="consultingTitle">CONSULTING AND TECHNICAL SERVICES</h4>
+      </div>
+      <div class="modal-body">
+        <p>Additional professional consulting services <strong>Pearl Street Systems</strong> provides include: LED training, technology and vendor assessment, new construction 3rd party lighting design review, utility rebate management, code compliance study, 3rd party field validation of light levels and energy savings.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="upgradeModal" tabindex="-1" role="dialog" aria-labelledby="upgradeTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="closeButton pull-right" data-dismiss="modal" aria-label="Close">&times</div>
+        <h4 class="modal-title" id="upgradeTitle">LIGHTING UPGRADE ASSESMENTS AND MASTER PLAN STUDIES</h4>
+      </div>
+      <div class="modal-body">
+          <p>The primary driver for upgrading to LED lighting is that it has to make financial sense; otherwise a facility’s valuable capital budget is better spent elsewhere. LED Lighting upgrade assessments are the first step in determining if a lighting upgrade warrants proceeding to a more comprehensive Investment Grade Lighting Audit (IGLA).  <strong>Pearl Street</strong> assessments evaluate a facility’s existing lighting systems and controls technologies, light levels (required and actual), cost of energy, lighting maintenance program and costs, run-hours, activities, available utility rebates and tax incentives, environmental benefits and other factors that contribute to the viability and attractiveness of a lighting upgrade.  Assessment and Master Plan Studies allow managers to present projects for budget allocation and pre-approval.  And if the assessment/study determines that the lighting upgrade is unable to meet the financial returns and/or other required parameters, then at least you know upfront and have saved yourself valuable time.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="auditsModal" tabindex="-1" role="dialog" aria-labelledby="auditsTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="closeButton pull-right" data-dismiss="modal" aria-label="Close">&times</div>
+        <h4 class="modal-title" id="auditsTitle">INVESTMENT GRADE LIGHTING AUDITS</h4>
+      </div>
+      <div class="modal-body">
+       <p>Investment Grade Lighting Audits (IGLAs) provide the necessary information to approve and fund a lighting upgrade project.  The scope of the audit includes a very detailed accounting of all fixtures and lighting controls, proposed upgrade solutions and their costs, operating cost savings and economic paybacks (both on individual areas/systems and the entire facility).  <strong>Pearl Street</strong> IGLAs are both comprehensive and lighting manufacturer independent. Our real-world experience with implementing lighting upgrades translates into a high quality and accurate report that customers can make investment decisions and budget forecasting with.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="designModal" tabindex="-1" role="dialog" aria-labelledby="designTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="closeButton pull-right" data-dismiss="modal" aria-label="Close">&times</div>
+        <h4 class="modal-title" id="designTitle">LIGHTING DESIGN AND ENGINEERING SERVICES</h4>
+      </div>
+      <div class="modal-body">
+       <p>With <strong>Pearl Street’s</strong> staff of qualified and certified lighting designers and engineers, we are extremely capable at detailed lighting analysis/design and construction bid package development.  Many lighting upgrade providers (including electrical contractors, electrical supply houses, ESCO’s and even engineering firms) lack this “in-house” lighting design staff, and must outsource to the lighting manufacturer representatives/agents.  These reps/agents in turn specify their products that are biased in nature and in many cases, sub-optimum when compared to all other options. Pearl Street is, at its core, an equipment supplier and authorized engineering firm with “in-house” lighting, electrical, structural and energy efficiency engineering capabilities.  So, for example, if a parking lot lighting upgrade project requires additional poles, we can engineer the new foundations and electrical feeds to these poles, as well as develop the plans and permitting package.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <div style="position: absolute; top: 50px; width: 100%; height: 3200px; background-color: white; z-index: 9999" class="loadingPage">
   <div style="width: 400px; margin: auto; margin-top: 50px" class="loadingGif">
       <img style="width: 395px" src="/assets/logos/loading.gif">
@@ -82,73 +204,53 @@
 </nav>
 
 <div class="container-fluid">
-  <div class="row cyanGradient upDownBorder" style="text-align: center; margin-top: 50px">
+  <div class="row">
+    <div id="landingView" style="background-image: url('assets/roche-drawing.jpg'); min-height: 200px; margin-top: 50px">
+    </div>
+  </div>
+  <div class="row cyanGradient upDownBorder" style="text-align: center;">
     <div class="col-md-7 col-sm-7 col-xs-12" style="padding: 15px;">
       <div class="mainHeader">
         <h1>SERVICES</h1>
       </div>
-      <p style="color: white; font-size: 24px; text-shadow: 2px 2px gray">Pearl Street Systems service offerings cover the entire lighting efficiency upgrade process, beginning with initial assessments through project implementation and financing. Customers can select from a single service, combination of services or turnkey project delivery.</p>
+      <p style="color: white; font-size: 24px;">Pearl Street Systems service offerings cover the entire lighting efficiency upgrade process, beginning with initial assessments through project implementation and financing. Customers can select from a single service, combination of services or turnkey project delivery.</p>
     </div>
     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 10px 10px 10px 0px;">
       <img src="assets/gmc-4.jpg" style="width: 100%;">
     </div>
   </div>
-  <div class="row">
-    <div id="landingView" style="background-image: url('assets/roche-drawing.jpg'); min-height: 200px;">
-    </div>
-  </div>
-  <div class="row blackGradient topBlackBorder" style="padding-top: 50px;">
-    <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer">
+  <div class="row blackGradient" style="padding: 50px 0px 50px 0px;">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="secHeaderContainer" data-toggle="modal" data-target="#upgradeModal">
         <h2 class="secondaryHeader">LIGHTING UPGRADE ASSESMENTS AND MASTER PLAN STUDIES</h2>
       </div>
-      <div class="contentBox">
-      <p>The primary driver for upgrading to LED lighting is that it has to make financial sense; otherwise a facility’s valuable capital budget is better spent elsewhere. LED Lighting upgrade assessments are the first step in determining if a lighting upgrade warrants proceeding to a more comprehensive Investment Grade Lighting Audit (IGLA).  <strong>Pearl Street</strong> assessments evaluate a facility’s existing lighting systems and controls technologies, light levels (required and actual), cost of energy, lighting maintenance program and costs, run-hours, activities, available utility rebates and tax incentives, environmental benefits and other factors that contribute to the viability and attractiveness of a lighting upgrade.  Assessment and Master Plan Studies allow managers to present projects for budget allocation and pre-approval.  And if the assessment/study determines that the lighting upgrade is unable to meet the financial returns and/or other required parameters, then at least you know upfront and have saved yourself valuable time.</p>
-      </div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer">
-        <h2 class="secondaryHeader">INVESTMENT GRADE LIGHTING AUDITS</h2>
-      </div>
-      <div class="contentBox">
-        <p>Investment Grade Lighting Audits (IGLAs) provide the necessary information to approve and fund a lighting upgrade project.  The scope of the audit includes a very detailed accounting of all fixtures and lighting controls, proposed upgrade solutions and their costs, operating cost savings and economic paybacks (both on individual areas/systems and the entire facility).  <strong>Pearl Street</strong> IGLAs are both comprehensive and lighting manufacturer independent. Our real-world experience with implementing lighting upgrades translates into a high quality and accurate report that customers can make investment decisions and budget forecasting with.</p>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="secHeaderContainer" data-toggle="modal" data-target="#auditsModal">
+        <h2 class="secondaryHeader">INVESTMENT GRADE LIGHTING AUDITS </h2>
       </div>
     </div>
     <div class="clearfix visible-sm-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="secHeaderContainer" data-toggle="modal" data-target="#designModal">
         <h2 class="secondaryHeader">LIGHTING DESIGN AND ENGINEERING SERVICES</h2>
       </div>
-      <div class="contentBox">
-          <p>With <strong>Pearl Street’s</strong> staff of qualified and certified lighting designers and engineers, we are extremely capable at detailed lighting analysis/design and construction bid package development.  Many lighting upgrade providers (including electrical contractors, electrical supply houses, ESCO’s and even engineering firms) lack this “in-house” lighting design staff, and must outsource to the lighting manufacturer representatives/agents.  These reps/agents in turn specify their products that are biased in nature and in many cases, sub-optimum when compared to all other options. Pearl Street is, at its core, an equipment supplier and authorized engineering firm with “in-house” lighting, electrical, structural and energy efficiency engineering capabilities.  So, for example, if a parking lot lighting upgrade project requires additional poles, we can engineer the new foundations and electrical feeds to these poles, as well as develop the plans and permitting package.</p>
-        </div>
     </div>
     <div class="clearfix visible-md-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="secHeaderContainer" data-toggle="modal" data-target="#consultingModal">
         <h2 class="secondaryHeader">CONSULTING AND TECHNICAL SERVICES</h2>
-      </div>
-      <div class="contentBox">
-        <p>Additional professional consulting services <strong>Pearl Street Systems</strong> provides include: LED training, technology and vendor assessment, new construction 3rd party lighting design review, utility rebate management, code compliance study, 3rd party field validation of light levels and energy savings.</p>
       </div>
     </div>
     <div class="clearfix visible-sm-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="secHeaderContainer" data-toggle="modal" data-target="#equipmentModal">
         <h2 class="secondaryHeader">LIGHTING EQUIPMENT SUPPLY</h2>
       </div>
-      <div class="contentBox">
-        <p><strong>Pearl Street Systems</strong> is one of the largest LED equipment suppliers in the Northeast; purchasing tens of thousands of LED fixtures, upgrade kits and lamps annually.  This means we have close vendor relationships and obtain very competitive pricing.  <strong>Pearl Street </strong>utilizes LED equipment from top tier manufacturers that are both financially stable and will be in business long-term to support equipment warranties.  Our engineering team continually validates new LED equipment entering the marketplace before we specify them in our customer designs and projects.</p>
-        <p>With <strong>Pearl Street’s</strong> design-supply offering, end-customers and contractors utilize our lighting design capabilities and experience to optimize their purchase and achieve the lowest life-cycle cost of ownership, correct lighting problems, meet codes and compliance, etc. And customers can use their preferred contractor or internal labor workforce for project installation, reducing overall costs.  To ensure project success, <strong>Pearl Street</strong> provides the necessary installation drawings, installer training, quality control program, system commissioning and performance validation.</p>
-      </div>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12" style="height: 100%">
-      <div class="secHeaderContainer" onclick="modal('#turnkey')" data-toggle="modal" data-target="#myModal">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="secHeaderContainer" data-toggle="modal" data-target="#turnkeyModal">
         <h2 class="secondaryHeader">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h2>
-      </div>
-      <div class="contentBox" id="turnkey">
-        <p>Our “turnkey” design-build offering affords single-source accountability for total project success.  Pearl Street Systems provides design services, equipment supply, installation (through our network of licensed electrical contractors), controls system commissioning and performance validation.</p>
-        <p>Pearl Street Systems is partnered with several leading commercial banks to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all the savings.</p>
       </div>
     </div>
   </div>
@@ -157,7 +259,7 @@
         <img src="assets/gymnasium.jpg" style="width: 100%;">
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12 flexBox">
-      <p style="color: white; font-size: 20px; text-shadow: 2px 2px gray; padding: 10px 0px 10px 10px">Pearl Street Systems is partnered with a leading commercial bank to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all of the savings.</p>
+      <p style="color: white; font-size: 20px; padding: 10px 0px 10px 10px">Pearl Street Systems is partnered with a leading commercial bank to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all of the savings.</p>
     </div>
   </div>
   <div class="row">
