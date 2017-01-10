@@ -385,13 +385,11 @@ $.fn.isOnScreen = function(){
         $($(this).data("target")).modal("show");
       });
     
-    $(document).ready(function(){
+    $(window).on("load", function(){
       $(".secHeaderContainer").hide();
       $(".loadingPage").fadeOut("slow");
-    })
-    $(window).on("load", function(){
-      $(".loadingPage").fadeOut("slow");
     });
+
 
   </script>
 </body>
