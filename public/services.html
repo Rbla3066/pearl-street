@@ -389,7 +389,9 @@ $.fn.isOnScreen = function(){
       $(".secHeaderContainer").hide();
       $(".loadingPage").fadeOut("slow");
     });
-
+    setTimeout(function(){
+      $(".loadingPage").fadeOut("slow");
+    }, 5000);
 
   </script>
 </body>
