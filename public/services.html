@@ -184,7 +184,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
     </div>
   </div>
 </div>
-
+<div style="position: absolute; top: 50px; width: 100%; height: 3200px; background-color: #005795; z-index: 9999" class="loadingPage">
+  <div style="width: 310px; margin: auto; margin-top: 50px" class="loadingGif">
+      <img style="width: 300px;" src="/assets/logos/loading.gif">
+  </div>
+</div>
 <nav class="lightshadow navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -230,37 +234,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
       <img src="assets/gymnasium.jpg" style="width: 100%;">
     </div>
   </div>
-  <div class="row blackGradient" style="padding: 50px 0px 50px 0px; min-height: 300px">
+  <div class="row blackGradient" style="padding: 50px 0px 50px 0px;">
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer bounceInLeft" id="firstButton" data-target="#upgradeModal">
+      <div class="secHeaderContainer" data-target="#upgradeModal">
         <h2 class="secondaryHeader">LIGHTING UPGRADE ASSESMENTS AND MASTER PLAN STUDIES</h2>
       </div>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer bounceInLeft" data-target="#auditsModal">
+      <div class="secHeaderContainer" data-target="#auditsModal">
         <h2 class="secondaryHeader">INVESTMENT GRADE LIGHTING AUDITS </h2>
       </div>
     </div>
     <div class="clearfix visible-sm-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer bounceInLeft" data-target="#designModal">
+      <div class="secHeaderContainer" data-target="#designModal">
         <h2 class="secondaryHeader">LIGHTING DESIGN AND ENGINEERING SERVICES</h2>
       </div>
     </div>
     <div class="clearfix visible-md-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer bounceInLeft" data-target="#consultingModal">
+      <div class="secHeaderContainer" data-target="#consultingModal">
         <h2 class="secondaryHeader">CONSULTING AND TECHNICAL SERVICES</h2>
       </div>
     </div>
     <div class="clearfix visible-sm-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer bounceInLeft" data-target="#equipmentModal">
+      <div class="secHeaderContainer" data-target="#equipmentModal">
         <h2 class="secondaryHeader">LIGHTING EQUIPMENT SUPPLY</h2>
       </div>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer bounceInLeft" data-target="#turnkeyModal">
+      <div class="secHeaderContainer" data-target="#turnkeyModal">
         <h2 class="secondaryHeader">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h2>
       </div>
     </div>
@@ -335,9 +339,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
 
 </script>
   <script type="text/javascript">
-    setTimeout(function(){
-      $(".loadingPage").attr("style", "display: none");
-    }, 5000);
+    var navLogo = $(".navbar-brand");
 
 
 $.fn.isOnScreen = function(){
@@ -359,33 +361,28 @@ $.fn.isOnScreen = function(){
 
 };
 
+    var header = $("#mainHeaderContainer");
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
           $(this).addClass($(this).data("effect"));
         }
       });
-      if($("#firstButton").isOnScreen()){
-        $(".secHeaderContainer").map(function(i, e){
-          setTimeout(() => {
-            $(e).show();
-          }, i*300);
-        });
-      }
+
     });
     $(".socialImg").on("mouseover", function(){
-      $(this).attr("style", "transform: scale(1.2)");
+      $(this).attr("style", "transform: scale(1.2)")
     }).on("mouseleave", function(){
-      $(this).attr("style", "transform: scale(1)");
+      $(this).attr("style", "transform: scale(1)")
     });
       $(".secHeaderContainer").on("tap", function(){
         $($(this).data("target")).modal("show");
       });
     
-    $(document).ready(function(){
-      $(".secHeaderContainer").hide();
+    $(window).on("load", function(){
       $(".loadingPage").fadeOut("slow");
     });
+
   </script>
 </body>
 </html>
