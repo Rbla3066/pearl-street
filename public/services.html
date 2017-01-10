@@ -234,7 +234,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
       <img src="assets/gymnasium.jpg" style="width: 100%;">
     </div>
   </div>
-  <div class="row blackGradient" style="padding: 50px 0px 50px 0px; min-height: 300px">
+  <div class="row blackGradient servicesContainer" style="padding: 50px 0px 50px 0px; min-height: 300px">
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="secHeaderContainer bounceInLeft" id="firstButton" data-target="#upgradeModal">
         <h2 class="secondaryHeader">LIGHTING UPGRADE ASSESMENTS AND MASTER PLAN STUDIES</h2>
@@ -366,7 +366,7 @@ $.fn.isOnScreen = function(){
           $(this).addClass($(this).data("effect"));
         }
       });
-      if($("#firstButton").isOnScreen()){
+      if($(".servicesContainer").isOnScreen()){
         $(".secHeaderContainer").map(function(i, e){
           window.setTimeout(function(){
             $(e).show();
