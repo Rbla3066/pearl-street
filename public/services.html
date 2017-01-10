@@ -386,7 +386,7 @@ $.fn.isOnScreen = function(){
         $($(this).data("target")).modal("show");
       });
     
-    $(window).on("load", function(){
+    $(document).ready(function(){
       $(".secHeaderContainer").hide();
       $(".loadingPage").fadeOut("slow");
     });
