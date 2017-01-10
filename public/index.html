@@ -242,7 +242,7 @@ $.fn.isOnScreen = function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
           $(this).addClass($(this).data("effect"));
-          this.style = "";
+          $(this).attr("style", "");
         }
       });
       if($(this).scrollTop() > 120){
