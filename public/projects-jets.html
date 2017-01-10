@@ -94,9 +94,9 @@
   <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW, ARCHIVE"/><!-- custom meta -->
 </head>
 <body>
-<div style="position: absolute; top: 50px; width: 100%; height: 3200px; background-color: white; z-index: 9999" class="loadingPage">
-  <div style="width: 400px; margin: auto; margin-top: 70px" class="loadingGif">
-      <img style="width: 395px" src="/assets/logos/loading.gif">
+<div style="position: absolute; top: 50px; width: 100%; height: 3200px; background-color: #005795; z-index: 9999" class="loadingPage">
+  <div style="width: 310px; margin: auto; margin-top: 70px" class="loadingGif">
+      <img style="width: 300px" src="/assets/logos/loading.gif">
   </div>
 </div>
 <nav class="lightshadow navbar navbar-inverse navbar-fixed-top">
@@ -303,7 +303,7 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/assets/js/jquery.tap.js"></script>
@@ -360,10 +360,9 @@ For the exterior, the new parking lot LED fixtures were equipped with integrated
     }).on("mouseleave", function(){
       $(this).attr("style", "transform: scale(1)")
     });
-    $(document).ready(function(){
-      console.log("done")
+    $(window).on("load", function(){
       $(".loadingPage").fadeOut("slow");
-    })
+    });
   </script>
 </body>
 </html>
