@@ -97,9 +97,9 @@ p {
     text-shadow: 1px 1px gray;
     font-size: 12px;
     text-align: center;
-    border-width: 5px 0px 0px 0px;
-    border-style: groove;
-    border-color: #005795;
+    border-width: 2px 0px 0px 0px;
+    border-style: solid;
+    border-color: black;
     min-height: 100px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b3b3b+0,070707+99 */
 background: rgb(59,59,59); /* Old browsers */
