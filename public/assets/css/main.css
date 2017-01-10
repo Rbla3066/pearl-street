@@ -116,7 +116,7 @@ p {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 500px;
+  height: 520px;
   text-align: center;
   color: white;
   margin-top: -25px;
@@ -549,10 +549,12 @@ h4 {
         float: none;
         margin: auto;
       }
-      .secondText {
-        padding: 10px;
+      .keyServiceContainer {
+      	padding-bottom: 30px
       }
-      
+      .secondText {
+      	padding-top: 10px;
+      }
       #mainHeaderContainer {
       	margin-left: 0px;
       }

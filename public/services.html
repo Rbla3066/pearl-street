@@ -234,37 +234,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
       <img src="assets/gymnasium.jpg" style="width: 100%;">
     </div>
   </div>
-  <div class="row blackGradient" style="padding: 50px 0px 50px 0px;">
+  <div class="row blackGradient" style="padding: 50px 0px 50px 0px; min-height: 300px">
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer" data-target="#upgradeModal">
+      <div class="secHeaderContainer bounceInLeft" id="firstButton" data-target="#upgradeModal">
         <h2 class="secondaryHeader">LIGHTING UPGRADE ASSESMENTS AND MASTER PLAN STUDIES</h2>
       </div>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer" data-target="#auditsModal">
+      <div class="secHeaderContainer bounceInLeft" data-target="#auditsModal">
         <h2 class="secondaryHeader">INVESTMENT GRADE LIGHTING AUDITS </h2>
       </div>
     </div>
     <div class="clearfix visible-sm-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer" data-target="#designModal">
+      <div class="secHeaderContainer bounceInLeft" data-target="#designModal">
         <h2 class="secondaryHeader">LIGHTING DESIGN AND ENGINEERING SERVICES</h2>
       </div>
     </div>
     <div class="clearfix visible-md-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer" data-target="#consultingModal">
+      <div class="secHeaderContainer bounceInLeft" data-target="#consultingModal">
         <h2 class="secondaryHeader">CONSULTING AND TECHNICAL SERVICES</h2>
       </div>
     </div>
     <div class="clearfix visible-sm-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer" data-target="#equipmentModal">
+      <div class="secHeaderContainer bounceInLeft" data-target="#equipmentModal">
         <h2 class="secondaryHeader">LIGHTING EQUIPMENT SUPPLY</h2>
       </div>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="secHeaderContainer" data-target="#turnkeyModal">
+      <div class="secHeaderContainer bounceInLeft" data-target="#turnkeyModal">
         <h2 class="secondaryHeader">TURNKEY DESIGN-BUILD LED LIGHTING UPGRADES</h2>
       </div>
     </div>
@@ -368,7 +368,13 @@ $.fn.isOnScreen = function(){
           $(this).addClass($(this).data("effect"));
         }
       });
-
+      if($("#firstButton").isOnScreen()){
+        $(".secHeaderContainer").map(function(i, e){
+          setTimeout(() => {
+            $(e).show();
+          }, i*300);
+        });
+      }
     });
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")
@@ -382,6 +388,7 @@ $.fn.isOnScreen = function(){
     $(document).ready(function(){
       console.log("done")
       $(".loadingPage").fadeOut("slow");
+      $(".secHeaderContainer").hide();
     })
 
   </script>
