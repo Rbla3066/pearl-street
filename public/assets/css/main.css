@@ -256,7 +256,8 @@ strong {
   z-index: 8000;
 }
 h4 {
-	color: #005795;
+	color: #007abe;
+	text-shadow: 2px 2px black;
 }
 .socialLogos {
 	margin: auto;
