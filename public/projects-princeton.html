@@ -316,6 +316,7 @@ Our services to Princeton include IGLA's (Investment Grade Lighting Audits) for 
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
+          $(this).attr("style", "");
           $(this).addClass($(this).data("effect"));
         }
       });
@@ -333,6 +334,7 @@ Our services to Princeton include IGLA's (Investment Grade Lighting Audits) for 
       $(this).attr("style", "transform: scale(1)")
     });
     $(window).on("load", function(){
+      $(".scrollEffect").attr("style", "visibility: hidden;");
       $(".loadingPage").fadeOut("slow");
     });
   </script>

@@ -159,7 +159,7 @@ p {
 }
 .roundImageText {
   text-align: center;
-  color: #005795;
+  color: #007abe;
   height: 130px;
   font-size: 18px;
   text-shadow: 2px 2px black;
@@ -226,7 +226,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
   font-size: 16px;
 }
 strong {
-	color: #005795;
+	color: #007abe;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
 }
 #mainHeader {
   font-family: 'Oswald', sans-serif;
@@ -402,6 +404,16 @@ h4 {
          		transform: scale(1);
          	}
          }
+         @-webkit-keyframes expandIn {
+         	0% {
+         		opacity: 0;
+         		-webkit-transform: scale(0.01);
+         	}
+         	100% {
+         		opacity: 1;
+         		-webkit-transform: scale(1);
+         	}
+         }
          @keyframes expanded {
          	0% {
          		transform: scale(1);
@@ -428,6 +440,16 @@ h4 {
          		opacity: 0;
          	}
          }
+         @-webkit-keyframes headerTransfer {
+         	0% {
+         		-webkit-transform: scale(1) translateX(0px) translateY(0px);
+         		opacity: 1;
+         	}
+         	100% {
+         		-webkit-transform: scale(0.3) translateX(-700px) translateY(-200px);
+         		opacity: 0;
+         	}
+         }
          @keyframes fadeIn {
          	0% {
          		opacity: 0;
@@ -436,13 +458,29 @@ h4 {
          		opacity: 1;
          	}
          }
+         @-webkit-keyframes fadeIn {
+         	0% {
+         		opacity: 0;
+         	}
+         	100% {
+         		opacity: 1;
+         	}
+         }
          .fadeIn {
+         	-webkit-animation-name: fadeIn;
+         	-webkit-animation-duration: 2s;
          	animation-name: fadeIn;
          	animation-duration: 2s;
+         	-webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
          }
          .headerTransfer {
+         	-webkit-animation-name: headerTransfer;
+         	-webkit-animation-duration: 2s;
          	animation-name: headerTransfer;
          	animation-duration: 2s;
+         	-webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
          }
          .shrink {
          	animation-name: shrink;
@@ -453,8 +491,12 @@ h4 {
          	animation-duration: 1s;
          }
          .expandIn {
+         	-webkit-animation-name: expandIn;
+         	-webkit-animation-duration: 2s;
          	animation-name: expandIn;
          	animation-duration: 2s;
+         	-webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 
          }
          .bounceInRight {
