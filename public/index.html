@@ -162,22 +162,22 @@
         </ul>
       </div>
         <div class="socialLogos">
-          <span class="socialIcon">
+          <span class="socialIcon bounceInLeft">
             <a href="https://www.linkedin.com/company/pearl-street-led-lighting-systems"><img class="socialImg" src="/assets/logos/linkedin_icon.png"></a>
           </span>
-          <span class="socialIcon">
+          <span class="socialIcon bounceInLeft">
             <a href="http://www.yellowpages.com/somerville-nj/mip/pearl-street-led-lighting-systems-505530911"><img class="socialImg" src="/assets/logos/yellowpages.png"></a>
           </span>
-          <span class="socialIcon">
+          <span class="socialIcon bounceInLeft">
             <a href="http://www.usgbc.org/organizations/pearl-street-led-lighting-systems"><img class="socialImg" src="assets/logos/green_building_council.png"></a>
           </span>
-          <span class="socialIcon">
+          <span class="socialIcon bounceInLeft">
             <a href="https://www.energystar.gov/"><img class="socialImg" src="/assets/logos/energy_star.png"></a>
           </span>
-          <span class="socialIcon">
+          <span class="socialIcon bounceInLeft">
             <a href="https://plus.google.com/111049483642207487221"><img class="socialImg" src="/assets/logos/google_plus.png"></a>
           </span>
-          <span class="socialIcon">
+          <span class="socialIcon bounceInLeft">
             <a href="http://www.njcleanenergy.com/tradeally/disclaimer?path=/residential/tools-and-resources/tradeally/approved_vendorsearch/?vid=5919"><img class="socialImg" src="/assets/logos/nj_clean_energy.png"></a>
           </span>
         </div>
@@ -242,11 +242,9 @@ $.fn.isOnScreen = function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
           $(this).addClass($(this).data("effect"));
+          this.style = "";
         }
       });
-      if($(".socialLogos").isOnScreen()){
-        
-      }
       if($(this).scrollTop() > 120){
         header.removeClass("expandIn");
         header.addClass("headerTransfer");
@@ -268,6 +266,7 @@ $.fn.isOnScreen = function(){
     });
     $(document).ready(function(){
       $(".loadingPage").fadeOut("slow");
+      $(".scrollEffect").attr("style", "visibility: hidden");
       $(".roundImageContainer").on("mouseover", function(){
         this.style = "border-style: groove;";
         var target = $($(this).data("target"));
