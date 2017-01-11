@@ -237,7 +237,24 @@ $.fn.isOnScreen = function(){
 
 };
 
-    var header = $("#mainHeaderContainer");
+
+    $(".socialImg").on("mouseover", function(){
+      $(this).attr("style", "transform: scale(1.2)")
+    }).on("mouseleave", function(){
+      $(this).attr("style", "transform: scale(1)")
+    });
+    $(document).ready(function(){
+      $(".scrollEffect").attr("style", "visibility: hidden");
+      $(".roundImageContainer").on("mouseover", function(){
+        this.style = "border-style: groove;";
+        var target = $($(this).data("target"));
+        target.attr("src", target.data("hover"));
+      }).on("mouseleave", function(){
+        this.style = "";
+        var target = $($(this).data("target"));
+        target.attr("src", target.data("initial"));
+      });
+      var header = $("#mainHeaderContainer");
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
@@ -257,23 +274,11 @@ $.fn.isOnScreen = function(){
         navLogo.fadeOut();
 
       }
-
-    });
-    $(".socialImg").on("mouseover", function(){
-      $(this).attr("style", "transform: scale(1.2)")
-    }).on("mouseleave", function(){
-      $(this).attr("style", "transform: scale(1)")
-    });
-    $(document).ready(function(){
-      $(".scrollEffect").attr("style", "visibility: hidden");
-      $(".roundImageContainer").on("mouseover", function(){
-        this.style = "border-style: groove;";
-        var target = $($(this).data("target"));
-        target.attr("src", target.data("hover"));
-      }).on("mouseleave", function(){
-        this.style = "";
-        var target = $($(this).data("target"));
-        target.attr("src", target.data("initial"));
+      //$(".roundImageContainer").map(function(){
+        //if($(this).isOnScreen()){
+          //$(this).attr("style", "-webkit-box-shadow: 0px -35px 20px 15px white; -moz-box-shadow: 0px -15px 20px 15px white; box-shadow: 0px -35px 20px 15px white;")
+       // }
+      //})
       });
     });
     $(window).on("load", function(){

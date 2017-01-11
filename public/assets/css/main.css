@@ -166,6 +166,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b3b3b', end
   -moz-box-shadow: 10px 15px 10px black;
   box-shadow: 10px 15px 10px black;
   background-color: #005795;
+  transition: box-shadow 2s;
+  -webkit-transition: box-shadow 2s;
+}
+.roundImageContainer:hover {
+  -webkit-box-shadow: 0px 0px 20px 20px white;
+  -moz-box-shadow: 0px 0px 20px 20px white;
+  box-shadow: 0px 0px 20px 20px white;
 }
 .projectsList {
 	min-height: 400px
