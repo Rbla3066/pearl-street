@@ -246,7 +246,7 @@ $.fn.isOnScreen = function(){
     $(document).ready(function(){
       $(".scrollEffect").attr("style", "visibility: hidden");
       $(".roundImageContainer").on("mouseover", function(){
-        this.style = "border-style: groove;";
+        this.style = "border-style: groove; border-color: white";
         var target = $($(this).data("target"));
         target.attr("src", target.data("hover"));
       }).on("mouseleave", function(){

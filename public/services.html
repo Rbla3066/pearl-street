@@ -23,9 +23,6 @@
 
   <link rel="stylesheet" href="assets/css/main.css">
   <style>
-    .contentArea {
-      height: 375px;
-    }
     .closeButton {
       background: rgb(69,72,77); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
@@ -63,7 +60,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070707', end
     }
     .modal-title {
       color: white;
-      text-shadow: 2px 2px gray;
+      text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
       font-size: 24px;
       font-family: 'Oswald', sans-serif;
     }
@@ -99,23 +107,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
       shape-outside:circle();
       margin-right: 50px;
     }
-    @media screen and (max-width: 430px){
-      .contentArea {
-        height: 450px;
-      }
-      #landingView {
-        background-attachment: initial;
-      }
-      .landing2 {
-        display: none;
-      }
+    .secondRound {
+      float: right;
+      margin-right: 0px;
+      margin-left: 50px
+    }
+    @media screen and (max-width: 555px){
       .roundImageContainer2 {
         float: none;
+        margin: auto;
+      }
+      .textSection {
+        text-align: center;
       }
     }
-    @media screen and (max-width: 350px){
-      .contentArea {
-        height: 500px;
+    @media screen and (max-width: 430px){
+      #landingView {
+        background-attachment: initial;
       }
     }
   </style>
@@ -259,18 +267,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
 -->
 <div class="container-fluid">
   <div class="row">
-    <div id="landingView" style="background-image: url('assets/roche-drawing.jpg'); min-height: 200px; margin-top: 50px">
+    <div id="landingView" style="background-image: url('/assets/jnj5.jpg'); min-height: 200px; margin-top: 50px">
     </div>
   </div>
   <div class="row cyanGradient upDownBorder">
     <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 15px;">
       <div class="roundImageContainer2">
-        <img class="hoverExpand" src="/assets/jnj4.jpg">
+        <img class="hoverExpand" src="/assets/gsusa1.jpg">
       </div>
-      <div class="mainHeader">
-        <h1>SERVICES</h1>
+      <div class="textSection">
+        <div class="mainHeader">
+          <h1>SERVICES</h1>
+        </div>
+        <p style="color: white; font-size: 24px;">Pearl Street Systems service offerings cover the entire lighting efficiency upgrade process, beginning with initial assessments through project implementation and financing. Customers can select from a single service, combination of services or turnkey project delivery.</p>
       </div>
-      <p style="color: white; font-size: 24px;">Pearl Street Systems service offerings cover the entire lighting efficiency upgrade process, beginning with initial assessments through project implementation and financing. Customers can select from a single service, combination of services or turnkey project delivery.</p>
     </div>
   </div>
   <div class="row blackGradient servicesContainer" style="padding: 50px 0px 50px 0px; min-height: 350px">
@@ -310,14 +320,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
   </div>
   <div class="row cyanGradient upDownBorder">
     <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 15px; text-align: right;">
-      <div class="roundImageContainer2" style="float: right; margin-right: 0px; margin-left: 50px">
-        <img src="assets/gmc-4.jpg" style="width: 160%; margin-left: -70px">
+      <div class="roundImageContainer2 secondRound">
+        <img src="assets/gmc1.jpg" style="width: 160%; margin-left: -70px">
       </div>
-      <p style="color: white; font-size: 20px; padding: 10px 0px 10px 10px">Pearl Street Systems is partnered with a leading commercial bank to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all of the savings.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div id="landingView" class="landing2" style="background-image: url('assets/roche-drawing.jpg'); min-height: 200px;">
+      <p class="textSection" style="color: white; font-size: 20px; padding: 10px 0px 10px 10px">Pearl Street Systems is partnered with a leading commercial bank to provide equipment leasing of your LED upgrade.  This allows the customer to upgrade to new LED lighting technology without any upfront capital outlay, and still achieve of positive cash flow (savings are greater than the lease payments) and lowering overall operating costs.  At the end of the lease term, the customer purchases the project for $1 and takes full advantage of all of the savings.</p>
     </div>
   </div>
   <div class="row">
