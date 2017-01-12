@@ -181,7 +181,7 @@
             <a href="http://www.njcleanenergy.com/tradeally/disclaimer?path=/residential/tools-and-resources/tradeally/approved_vendorsearch/?vid=5919"><img class="socialImg" src="/assets/logos/nj_clean_energy.png"></a>
           </span>
         </div>
-        <p class="copyright">©COPYRIGHT  2016 Pearl Street Systems</p>
+        <p class="copyright">©COPYRIGHT  2017 Pearl Street Systems</p>
     </div>
   </div>
 </div>
@@ -218,24 +218,16 @@
       
     }, 3500);
 
-$.fn.isOnScreen = function(){
+  $.fn.isOnScreen = function()
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
 
-    var win = $(window);
+    var elemTop = $(this).offset().top;
+    var elemBottom = elemTop + $(this).height();
 
-    var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-
-    var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
-
-    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-};
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
 
 
     $(".socialImg").on("mouseover", function(){

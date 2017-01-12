@@ -32,6 +32,34 @@
   color: white;
   border-radius: 0px 0px 10px 10px;
 }
+.lampLight {
+  float: right;
+  margin-left: -50px;
+  background-image: url('/assets/drawings/tool.png');
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+}
+.light {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 70px;
+  -webkit-box-shadow: 0px 0px 0px 0px white;
+  -moz-box-shadow: 0px 0px 0px 0px white;
+  box-shadow: 0px 0px 0px 0px white;
+  background-color: transparent;
+  transition: box-shadow 2s linear;
+  -webkit-transition: box-shadow 2s linear;
+}
+
+.rocheBack {
+  background-attachment: fixed;
+  background-image: url('/assets/projects/dji2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .projectContainer {
   background-image: url('../Jets.jpg');
   margin-top: 25px;
@@ -88,6 +116,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 a:hover {
   text-decoration: none;
 }
+@media screen and (max-width: 555px){
+  .rocheBack {
+    background-attachment: initial;
+    background-image: initial;
+    background-color: black;
+  }
+}
   </style>
   
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -139,6 +174,9 @@ a:hover {
     <div class="col-md-12">
       <div class="flexBox" style="padding: 15px">
         <div>
+          <div class="lampLight">
+            <div class="light"></div>
+          </div>
           <div class="mainHeader">
             <h2>PROJECTS</h2>
           </div>
@@ -147,7 +185,7 @@ a:hover {
       </div>
     </div>
   </div>
-  <div class="row blackGradient" style="padding-bottom: 25px; padding-top: 25px">
+  <div class="row rocheBack" style="padding-bottom: 25px; padding-top: 25px">
     <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
       <a href="/projects/jets">
         <div class="projectImage">
@@ -236,7 +274,7 @@ a:hover {
             <a href="http://www.njcleanenergy.com/tradeally/disclaimer?path=/residential/tools-and-resources/tradeally/approved_vendorsearch/?vid=5919"><img class="socialImg" src="/assets/logos/nj_clean_energy.png"></a>
           </span>
         </div>
-        <p class="copyright">©COPYRIGHT  2016 Pearl Street Systems</p>
+        <p class="copyright">©COPYRIGHT  2017 Pearl Street Systems</p>
     </div>
   </div>
 </div>
@@ -259,26 +297,17 @@ a:hover {
 
 </script>
   <script type="text/javascript">
+  $.fn.isOnScreen = function()
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
 
+    var elemTop = $(this).offset().top;
+    var elemBottom = elemTop + $(this).height();
 
-    $.fn.isOnScreen = function(){
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
 
-    var win = $(window);
-
-    var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-
-    var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
-
-    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-};
 
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
@@ -287,6 +316,9 @@ a:hover {
           $(this).addClass($(this).data("effect"));
         }
       });
+      if($(".light").isOnScreen()){
+        $(".light").attr("style", "-webkit-box-shadow: 0px 5px 60px 60px white;-moz-box-shadow: 0px 5px 60px 60px white;box-shadow: 0px 5px 60px 60px white;background-color: white;")
+      }
     });
 
     $(".socialImg").on("mouseover", function(){
