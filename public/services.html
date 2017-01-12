@@ -112,6 +112,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
       margin-right: 0px;
       margin-left: 50px
     }
+    .lampBackground {
+      background-image: url('/assets/led-lamp.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 50px 0px 50px 0px;
+      min-height: 350px
+    }
     @media screen and (max-width: 555px){
       .roundImageContainer2 {
         float: none;
@@ -119,6 +127,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
       }
       .textSection {
         text-align: center;
+      }
+      .lampBackground {
+        background-attachment: initial;
       }
     }
     @media screen and (max-width: 430px){
@@ -283,7 +294,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
       </div>
     </div>
   </div>
-  <div class="row blackGradient servicesContainer" style="padding: 50px 0px 50px 0px; min-height: 350px">
+  <div class="row servicesContainer lampBackground">
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="secHeaderContainer bounceInLeft" id="firstButton" data-target="#upgradeModal">
         <h2 class="secondaryHeader">LIGHTING UPGRADE ASSESMENTS AND MASTER PLAN STUDIES</h2>
