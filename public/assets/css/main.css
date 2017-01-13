@@ -288,6 +288,9 @@ strong {
   font-weight: bold;
   text-shadow: 4px 4px black;
 }
+.container-fluid {
+	overflow: hidden;
+}
 .mainHeader {
   font-family: 'Oswald', sans-serif;
   font-size: 60px;
