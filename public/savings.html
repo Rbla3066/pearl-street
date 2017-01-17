@@ -67,7 +67,6 @@
 	<script src="assets/js/navbar.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$(".dropdown-toggle").dropdown();
 			$.get('/api/existing-fixtures', function(data){
 				for(let i in data){
 					$("#fixtureInput").append("<li data-value='"+data[i].name+"'><img src='"+data[i].image_url+"' class='fixtureImg'>"+data[i].name+"</li>");

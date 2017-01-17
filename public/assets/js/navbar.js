@@ -5,6 +5,11 @@ $(document).ready(function(){
 		e.preventDefault();
 		return false;
 	});
+	$(".princetonLogo").on("mouseover", function(){
+		this.src = "/assets/logos/princetonlogo2.png";
+	}).on("mouseleave", function(){
+		this.src = "/assets/logos/princetonlogo.png";
+	})
 });
 
 
