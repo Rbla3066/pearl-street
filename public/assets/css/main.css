@@ -195,6 +195,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b3b3b', end
 .projectsList {
 	min-height: 400px
 }
+.loadingPage {
+	position: fixed;
+	width: 100%;
+	background-color: #005795;
+	z-index: 9999;
+	height: 100%;
+	top: 0;
+}
 .upDownBorder {
 	border-width: 10px 0px 10px 0px;
 	border-style: ridge;
@@ -308,7 +316,7 @@ h4 {
 	margin: 5px;
 }
 .socialImg {
-	height: 70px;
+	height: 50px;
 }
 .replacementImg {
 	display: none;
@@ -628,7 +636,7 @@ h4 {
         float: none;
         width: 100%;
       }
-     	
+
       .roundImageContainer {
         float: none;
         margin: auto;

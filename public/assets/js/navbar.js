@@ -1,5 +1,7 @@
 
+
 $(document).ready(function(){
+	$(".loadingPage").attr("style", "position: fixed; z-index: 9999; background-color: #005795; height: "+(height)+"px; width: 100%;");
 	$("button").on("tap", function(e){
 		$(this).trigger("click");
 		e.preventDefault();
@@ -25,16 +27,16 @@ $(document).ready(function(){
 
 	};
 	var height = $(window).height();
-	
+
 	$(".fitToScreen").attr("style", "min-height: "+(height + 75)+"px;");
-	$(".homeLogo").attr("style", "margin-top: "+ (height/2 - 150) + "px;");
+	$(".homeLogo").attr("style", "margin-top: "+ (height/2 - 130) + "px;");
 	$(".scrollEffect").map(function(){
 		if($(this).isOnScreen()){
             $(this).addClass($(this).data("effect"));
             $(this).attr("style", "");
 		}
 	});
-	$(".loadingPage").attr("style", "position: fixed; z-index: 9999; background-color: #005795; height: "+(height - 50)+"px; width: 100%; top: 50px;");
+	
 });
 
 
