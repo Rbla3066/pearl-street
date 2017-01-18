@@ -103,12 +103,11 @@
 <div class="container-fluid blackGradient">
   <div class="row">
     <div class="col-12-md">
-      <div id="landingView">
+      <div id="anchor"></div>
+      <div id="landingView" class="fitToScreen">
         <div id="mainHeaderContainer" class="expandIn">
-         <h1 id="mainHeader">PEARL STREET</h1>
-         <h2 id="headerSubText">LED LIGHTING SYSTEMS</h2>
-         <img class="mainLogo" src="assets/logos/pearl_street_logo.jpg">
-         
+         <img class="homeLogo" src="assets/logos/pearlstreetfulllogo5.png">
+         <img class="mobileLogo" src="/assets/logos/pearljusttextlogo.png">
         </div>
       </div>
     </div>
@@ -207,8 +206,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/assets/js/jquery.tap.js"></script>
 
-	<script src="assets/js/navbar.js"></script>
-  <script src="https://raw.githubusercontent.com/markdalgleish/stellar.js/master/jquery.stellar.min.js"></script>
+	<script src="/assets/js/navbar.js"></script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -220,6 +218,10 @@
 
   </script>
   <script type="text/javascript">
+    var mobile = false;
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        mobile = true;
+      }
     var navLogo = $(".navbar-brand");
     var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Crystal Auto Mall'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}, {quote: '"The finished product looks 1000% better than before..."', quotee: 'Quinnipiac University'}];
     var ind = 0;
@@ -234,16 +236,6 @@
       
     }, 3500);
 
-  $.fn.isOnScreen = function()
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(this).offset().top;
-    var elemBottom = elemTop + $(this).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
 
 
     $(".socialImg").on("mouseover", function(){
@@ -252,7 +244,6 @@
       $(this).attr("style", "transform: scale(1)")
     });
     $(document).ready(function(){
-      $(".scrollEffect").attr("style", "visibility: hidden");
       $(".roundImageContainer").on("mouseover", function(){
         this.style = "border-style: groove; border-color: white";
         var target = $($(this).data("target"));
@@ -263,29 +254,38 @@
         target.attr("src", target.data("initial"));
       });
       var header = $("#mainHeaderContainer");
+      var height = $(window).height();
+      var atHead = true;
       $(window).scroll(function(){
         $(".scrollEffect").map(function(){
           if($(this).isOnScreen()){
-            $(this).addClass($(this).data("effect"));
+            $(this).addClass($(this).data("effect")).removeClass("scrollEffect");
             $(this).attr("style", "");
           }
         });
-        if($(this).scrollTop() > 120){
+        if(atHead && $(this).scrollTop() > height/4.5){
+          $(".glyphicon-menu-down").fadeOut();
+          atHead = false;
           header.removeClass("expandIn");
           header.addClass("headerTransfer");
           header.fadeOut();
           navLogo.fadeIn();
-        } else {
+        } else if(!atHead && $(this).scrollTop() <= height/4.5){
+          $(".glyphicon-menu-down").fadeIn();
+          atHead = true;
           header.removeClass("headerTransfer");
           header.addClass("expandIn");
           header.fadeIn();
           navLogo.fadeOut();
         }
       });
+      $("body").prepend("<div class='scrollCarrot' style='top: "+(height - 50)+"px;'><span class='glyphicon glyphicon-menu-down float'></span></div>");
     });
     $(window).on("load", function(){
       navLogo.hide();
       $(".loadingPage").fadeOut("slow");
+    location.href = "#";
+    location.href = "#anchor";
     });
 
   </script>

@@ -3,7 +3,13 @@ var bodyParser = require('body-parser');
 var app = express();
 var PORT = process.env.PORT || 8080;
 var path = require('path');
-
+//var exphbs = require('express-handlebars');//handlebars
+//// Sets the handlebars rendering engine. 
+//app.engine('handlebars', exphbs({
+//   defaultLayout: 'main'
+//}));
+//
+//app.set('view engine', 'handlebars');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

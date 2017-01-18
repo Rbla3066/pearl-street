@@ -32,27 +32,7 @@
   color: white;
   border-radius: 0px 0px 10px 10px;
 }
-.lampLight {
-  float: right;
-  margin-left: -50px;
-  background-image: url('/assets/drawings/tool.png');
-  background-size: cover;
-  height: 200px;
-  width: 200px;
-}
-.light {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 70px;
-  -webkit-box-shadow: 0px 0px 0px 0px white;
-  -moz-box-shadow: 0px 0px 0px 0px white;
-  box-shadow: 0px 0px 0px 0px white;
-  background-color: transparent;
-  transition: box-shadow 2s linear;
-  -webkit-transition: box-shadow 2s linear;
-}
+
 
 .rocheBack {
   background-attachment: fixed;
@@ -167,16 +147,10 @@ a:hover {
 </nav>
 
 <div class="container-fluid" style="margin-top: 50px; background-color: lightgray">
-  <div class="row">
-      <div class="headerImage" style="background-image: url('assets/Jets.jpg');"></div>
-  </div>
   <div class="row cyanGradient upDownBorder">
     <div class="col-md-12">
       <div class="flexBox" style="padding: 15px">
         <div>
-          <div class="lampLight">
-            <div class="light"></div>
-          </div>
           <div class="mainHeader">
             <h2>PROJECTS</h2>
           </div>
@@ -202,14 +176,45 @@ a:hover {
     </div>
     <div class="clearfix visible-sm-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInRight">
+      <a href="/projects/gwu">
+        <div class="projectImage">
+          <img src="/assets/logos/gwu.png" class="projectLogo">
+        </div>
+      </a>
+    </div>
+    <div class="clearfix visible-md-block"></div>
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
       <a href="/projects/jfk-hospital">
         <div class="projectImage">
           <img src="/assets/logos/jfklogo.png" class="projectLogo">
         </div>
       </a>
     </div>
+    <div class="clearfix visible-sm-block"></div>
+   <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
+      <a href="/projects/nyu">
+        <div class="projectImage">
+          <img src="/assets/logos/nyu.png" class="projectLogo">
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInRight">
+      <a href="/projects/sloan-kettering">
+        <div class="projectImage">
+          <img src="/assets/logos/sloankettering.png" class="projectLogo">
+        </div>
+      </a>
+    </div>
     <div class="clearfix visible-md-block"></div>
+    <div class="clearfix visible-sm-block"></div>
     <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
+      <a href="/projects/crystal-auto-mall">
+        <div class="projectImage">
+          <img src="/assets/logos/crystalautomall.png" class="projectLogo">
+        </div>
+      </a>
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
       <a href="/projects/quinnipiac">
         <div class="projectImage">
           <img src="/assets/logos/quinnipiac.png" class="projectLogo">
@@ -217,41 +222,10 @@ a:hover {
       </a>
     </div>
     <div class="clearfix visible-sm-block"></div>
-   <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
-      <a href="/projects/crystal-auto-mall">
-        <div class="projectImage">
-          <img src="/assets/logos/crystalautomall.png" class="projectLogo">
-        </div>
-      </a>
-    </div>
-    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInRight">
+    <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12 scrollEffect" data-effect="bounceInRight">
       <a href="/projects/flemington-cars">
         <div class="projectImage">
           <img src="/assets/logos/flemington_car.png" class="projectLogo">
-        </div>
-      </a>
-    </div>
-    <div class="clearfix visible-md-block"></div>
-    <div class="clearfix visible-sm-block"></div>
-    <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
-      <a href="/projects/merck">
-        <div class="projectImage">
-          <img src="/assets/logos/merck.png" class="projectLogo">
-        </div>
-      </a>
-    </div>
-   <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInBottom">
-      <a href="/projects/gwu">
-        <div class="projectImage">
-          <img src="/assets/logos/gwu.png" class="projectLogo">
-        </div>
-      </a>
-    </div>
-    <div class="clearfix visible-sm-block"></div>
-    <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12 scrollEffect" data-effect="bounceInRight">
-      <a href="/projects/jnj">
-        <div class="projectImage">
-          <img src="/assets/logos/jnj.png" class="projectLogo">
         </div>
       </a>
     </div>
@@ -321,23 +295,13 @@ a:hover {
 
 </script>
   <script type="text/javascript">
-  $.fn.isOnScreen = function()
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(this).offset().top;
-    var elemBottom = elemTop + $(this).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
 
 
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
           $(this).attr("style", "");
-          $(this).addClass($(this).data("effect"));
+          $(this).addClass($(this).data("effect")).removeClass("scrollEffect");
         }
       });
       if($(".light").isOnScreen()){
@@ -351,7 +315,6 @@ a:hover {
       this.style = "transform: scale(1);";
     });
     $(window).on("load", function(){
-      $(".scrollEffect").attr("style", "visibility: hidden");
       $(".loadingPage").fadeOut("slow");
     });
   </script>

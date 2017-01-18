@@ -257,7 +257,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
     <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
       <a href="/projects/merck">
         <div class="projectImage">
-          <img src="/assets/logos/merck.png" class="projectLogo">
+          <img src="/assets/logos/nyu.png" class="projectLogo">
         </div>
       </a>
     </div>
@@ -272,7 +272,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
     <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12 scrollEffect" data-effect="bounceInRight">
       <a href="/projects/jnj">
         <div class="projectImage">
-          <img src="/assets/logos/jnj.png" class="projectLogo">
+          <img src="/assets/logos/sloankettering.png" class="projectLogo">
         </div>
       </a>
     </div>
@@ -337,30 +337,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
   <script type="text/javascript">
 
 
-$.fn.isOnScreen = function(){
-
-    var win = $(window);
-
-    var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-
-    var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
-
-    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-};
 
     $(window).scroll(function(){
       $(".scrollEffect").map(function(){
         if($(this).isOnScreen()){
           $(this).attr("style", "");
-          $(this).addClass($(this).data("effect"));
+          $(this).addClass($(this).data("effect")).removeClass("scrollEffect");
         }
       });
     });
@@ -372,7 +354,6 @@ $.fn.isOnScreen = function(){
       $(this).attr("style", "transform: scale(1)")
     });
     $(window).on("load", function(){
-      $(".scrollEffect").attr("style", "visibility: hidden;");
       $(".loadingPage").fadeOut("slow");
     });
   </script>

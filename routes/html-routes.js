@@ -17,5 +17,5 @@ module.exports = function(app){
 		var project = req.params.project;
 		res.sendFile(path.join(__dirname + '/../public/projects-'+project+'.html'));
 	});
-
+	
 };

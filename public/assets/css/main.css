@@ -44,26 +44,35 @@ p {
 }
 .secondaryHeader {
 	color: rgb(240, 240, 240);
-	text-shadow: 1px 1px gray;
 	font-size: 28px;
 	text-align: center;
 	line-height: 32px;
 	font-family: 'Oswald', sans-serif;
 }
-#headerSubText {
-	color: #005795;
-	font-size: 47px;
-	font-family: 'Oswald', sans-serif;
-	text-shadow: 2px 2px black;
-	margin-top: -18px;
-}
-.mainLogo {
-	height: 115px;
-	margin-top: -170px;
-	margin-right: -555px;
+
+.homeLogo {
+	width: 90%;
+	max-width: 600px;
+	margin: auto;
+	margin-top: 100px;
+	background-color: rgba(10, 10, 10, 0.5);
+	padding: 8px;
+	border-radius: 5px;
 }
 .altImage {
 	width: 220px;
+}
+.scrollCarrot {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 9999;
+	font-size: 40px;
+	color: white;
+}
+.glyphicon-menu-down {
+	margin: auto;
+	animation-name: float
 }
 .secHeaderContainer {
   margin: auto;
@@ -104,7 +113,6 @@ p {
 #footer {
 	width: 100%;
     color: white;
-    text-shadow: 1px 1px gray;
     font-size: 12px;
     text-align: center;
     border-width: 2px 0px 0px 0px;
@@ -269,13 +277,6 @@ strong {
 	font-weight: bold;
 	text-shadow: 1px 1px black;
 }
-#mainHeader {
-  font-family: 'Oswald', sans-serif;
-  font-size: 80px;
-  padding-top: 200px;
-  font-weight: bold;
-  text-shadow: 4px 4px black;
-}
 .container-fluid {
 	overflow: hidden;
 }
@@ -284,7 +285,6 @@ strong {
   font-size: 60px;
   color: white;
   font-weight: bold;
-  text-shadow: 1px 1px gray;
   text-align: center;
   margin: auto;
   padding: 5px 0px 15px 0px;
@@ -294,7 +294,6 @@ strong {
 }
 #mainHeaderContainer {
   height: 100px;
-  margin-left: -80px;
   z-index: 8000;
 }
 h4 {
@@ -328,6 +327,14 @@ h4 {
 	width: 100%;
 	background-size: cover;
 }
+.mobileLogo {
+	display: none;
+	width: 90%;
+	margin-top: 200px;
+	background-color: rgba(10, 10, 10, 0.6);
+	padding: 5px 0px 5px 5px;
+	border-radius: 5px;
+}
 
 
 
@@ -337,6 +344,28 @@ h4 {
 
 .footerLogo{
    margin: auto;
+}
+@-webkit-keyframes float {
+	0% {
+		-webkit-transform: translateY(0px);
+	}
+	50% {
+		-webkit-transform: translateY(-10px);
+	}
+	100% {
+		-webkit-transform: translateY(0px);
+	}
+}
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 @-webkit-keyframes bounceInRight {
             0% {
@@ -505,6 +534,16 @@ h4 {
             animation-fill-mode: both;
 
          }
+         .float {
+         	-webkit-animation-name: float;
+            animation-name: float;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+         }
          .bounceInRight {
             -webkit-animation-name: bounceInRight;
             animation-name: bounceInRight;
@@ -589,10 +628,7 @@ h4 {
         float: none;
         width: 100%;
       }
-      .mainLogo {
-      	margin-top: 0px;
-      	margin-right: 0px;
-      }
+     	
       .roundImageContainer {
         float: none;
         margin: auto;
@@ -602,9 +638,6 @@ h4 {
       }
       .secondText {
       	padding-top: 10px;
-      }
-      #mainHeaderContainer {
-      	margin-left: 0px;
       }
       .secContainer {
         padding-top: 15px;
@@ -619,6 +652,12 @@ h4 {
     @media screen and (max-width: 420px) {
       #mainHeader {
         padding-top: 100px;
+      }
+      .homeLogo {
+      	display: none;
+      }
+      .mobileLogo {
+      	display: initial;
       }
       .contentBox {
         margin: 5px;
