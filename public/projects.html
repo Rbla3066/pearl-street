@@ -67,11 +67,13 @@
   justify-content: space-around;
   flex-direction: row;
   border-radius: 50%;
-background: rgb(69,72,77); /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#212121+0,040404+100 */
+background: rgb(33,33,33); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(33,33,33,1) 0%, rgba(4,4,4,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(33,33,33,1) 0%,rgba(4,4,4,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(33,33,33,1) 0%,rgba(4,4,4,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#040404',GradientType=0 ); /* IE6-9 */
+
   width: 100%;
   margin-bottom: 15px;
   border-style: groove;
@@ -147,18 +149,27 @@ a:hover {
 </nav>
 
 <div class="container-fluid" style="margin-top: 50px; background-color: lightgray">
-  <div class="row cyanGradient upDownBorder">
+  <div class="row cyanGradient topBlackBorder">
     <div class="col-md-12">
-      <div class="flexBox" style="padding: 15px">
+      <div style="padding: 15px; text-align: center">
         <div>
           <div class="mainHeader">
+          
+          <div class="dividerLine four"></div>
             <h2>PROJECTS</h2>
+            <div class="dividerLine four"></div>
+            <div class="dividerLine three"></div>
+            <div class="dividerLine two"></div>
+            <div class="dividerLine"></div>
           </div>
-        <p style="font-size: 18px">Pearl Street Systems is one of the largest commercial and industrial LED lighting efficiency upgrade/retrofit providers in the Northeast.  Here are just a few sample projects that demonstrate our capabilities and satisfied customers.  We have many more projects and success stories that are comparable to your facility.  So please contact us to learn more about the Pearl Street difference and how we can drastically cut your operating costs and enhance your lighting.</p>
+        
         </div>
       </div>
     </div>
   </div>
+  <div class="row silverGradient upDownBorder">
+      <div class="col-md-12"><p style="font-size: 18px;" class="greyTextBox">Pearl Street Systems is one of the largest commercial and industrial LED lighting efficiency upgrade/retrofit providers in the Northeast.  Here are just a few sample projects that demonstrate our capabilities and satisfied customers.  We have many more projects and success stories that are comparable to your facility.  So please contact us to learn more about the Pearl Street difference and how we can drastically cut your operating costs and enhance your lighting.</p></div>
+    </div>
   <div class="row rocheBack" style="padding-bottom: 25px; padding-top: 25px">
     <div class="col-md-4 col-sm-6 col-xs-12 scrollEffect" data-effect="bounceInLeft">
       <a href="/projects/jets">
@@ -230,7 +241,7 @@ a:hover {
       </a>
     </div>
   </div>
-  <div class="row cyanGradient upDownBorder">
+  <div class="row silverGradient upDownBorder">
     <div class="col-md-12">
       <div class="mainHeader">
         <h2></h2>

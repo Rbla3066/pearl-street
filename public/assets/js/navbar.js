@@ -29,14 +29,13 @@ $(document).ready(function(){
 	var height = $(window).height();
 
 	$(".fitToScreen").attr("style", "min-height: "+(height + 75)+"px;");
-	$(".homeLogo").attr("style", "margin-top: "+ (height/2 - 130) + "px;");
 	$(".scrollEffect").map(function(){
 		if($(this).isOnScreen()){
             $(this).addClass($(this).data("effect"));
             $(this).attr("style", "");
 		}
 	});
-	
+	$(".mainHeader").attr("style", "font-size: "+( $(window).height() * 0.20 < 64 ? $(window).height() * 0.20 : 64)+";");
 });
 
 
