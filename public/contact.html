@@ -80,6 +80,19 @@ background: linear-gradient(to bottom,  rgba(7,7,7,1) 0%,rgba(59,59,59,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070707', endColorstr='#3b3b3b',GradientType=0 ); /* IE6-9 */
 
     }
+    .roundImageContainer2 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border-style: groove;
+      border-color: #005795;
+      overflow: hidden;
+      border-width: 15px;
+      float: left;
+      -webkit-shape-outside:circle();
+      shape-outside:circle();
+      margin-right: 50px;
+    }
     .modal-title {
       color: white;
       text-shadow: 0 1px 0 #ccc,
@@ -111,6 +124,12 @@ background: linear-gradient(to bottom,  rgba(3,95,171,1) 0%,rgba(11,81,135,1) 40
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', endColorstr='#023966',GradientType=0 ); /* IE6-9 */
       border-radius: 5px 5px 0px 0px;
 
+    }
+    @media screen and (max-width: 555px){
+      .roundImageContainer2 {
+        float: none;
+        margin: auto;
+      }
     }
   </style>
   
@@ -176,11 +195,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035fab', end
   <div class="row cyanGradient upDownBorder">
     <div class="flexBox" style="padding: 35px">
       <div>
+        <div class="roundImageContainer2 secondRound">
+          <img src="assets/projects/atwork.jpg" style="width: 160%; margin-left: -70px">
+        </div>
         <div class="mainHeader">
-          <h1>Contact</h1>
+          <h1 style="text-align: left; margin-bottom: -10px;">Contact us Today!</h1>
           <div class="dividerLine"></div>
         </div>
-        <p style="padding: 25px">Contact Pearl Street Systems and learn how we can help you reduce your lighting system operating costs with custom engineered LED upgrades.  With offices in Somerville, New Jersey and New York City, we focus on serving the New Jersey, New York, Pennsylvania, and Connecticut markets.</p>
+        <p style="padding: 25px; font-size: 20px;">Contact Pearl Street Systems and learn how we can help you reduce your lighting system operating costs with custom engineered LED upgrades.  With offices in Somerville, New Jersey and New York City, we focus on serving the New Jersey, New York, Pennsylvania, and Connecticut markets.</p>
       </div>
     </div>
   </div>
