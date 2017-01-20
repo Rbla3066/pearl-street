@@ -97,11 +97,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', end
 a:hover {
   text-decoration: none;
 }
+.mainHeader {
+  text-align: left;
+}
+.roundImageContainer2 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border-style: groove;
+      border-color: #005795;
+      overflow: hidden;
+      border-width: 10px;
+      float: left;
+      -webkit-shape-outside:circle();
+      shape-outside:circle();
+      margin-right: 50px;
+    }
+    .secondRound {
+      float: right;
+      margin-right: 0px;
+      margin-left: 50px
+    }
+      
 @media screen and (max-width: 555px){
   .rocheBack {
     background-attachment: initial;
     background-image: initial;
-    background-color: black;
+    background-color: rgb(30, 30, 30);
+  }
+  .roundImageContainer2 {
+        float: none;
+        margin: auto;
+      }
+  .mainHeader {
+    text-align: center;
   }
 }
   </style>
@@ -147,18 +176,17 @@ a:hover {
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container-fluid" style="background-color: lightgray">
-  <div class="row">
-    <div id="landingView" style="background-image: url('/assets/Jets.jpg'); min-height: 300px; margin-top: 50px">
-    </div>
-  </div>
+<div class="container-fluid" style="margin-top: 50px">
   <div class="row cyanGradient upDownBorder">
     <div class="col-md-12">
       <div style="padding: 15px; text-align: center">
         <div>
+          <div class="roundImageContainer2" style="margin-bottom: 15px;">
+            <img src="/assets/Jets.jpg" alt="LED Lighting Upgrade" style="width: 160%; margin-left: -70px">
+          </div>
           <div class="mainHeader">
             <h2>PROJECTS</h2>
-            <div class="dividerLine"></div>
+            <div class="dividerLine" style="margin-top: -20px"></div>
           </div>
           <p class="textSection" style="text-align: left;">Pearl Street Systems is one of the largest commercial and industrial LED lighting efficiency upgrade/retrofit providers in the Northeast.  Here are just a few sample projects that demonstrate our capabilities and satisfied customers.  We have many more projects and success stories that are comparable to your facility.  So please contact us to learn more about the Pearl Street difference and how we can drastically cut your operating costs and enhance your lighting.</p>
         </div>
