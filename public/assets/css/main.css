@@ -199,6 +199,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b3b3b', end
 	height: 100%;
 	top: 0;
 }
+.loadingGif{
+	margin-top: 120px;
+}
 .upDownBorder {
 	border-width: 10px 0px 10px 0px;
 	border-style: ridge;
