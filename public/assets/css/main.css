@@ -334,7 +334,6 @@ strong {
   padding: 5px 0px 15px 0px;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
 
 }
 .projectImage {
@@ -387,11 +386,15 @@ h4 {
 	border-radius: 5px;
 }
 .carouselHeader {
-	border-radius: 5px 5px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
 	margin-bottom: 0px;
 }
 .projectPhotos {
-	border-radius: 0px 0px 5px 5px !important;
+	border-radius: 0px 0px 10px 10px !important;
+}
+.projectImage {
+	max-width: 500px;
+	margin: auto;
 }
 
 
@@ -655,7 +658,7 @@ h4 {
       .keyServiceContainer {
         border-style: groove;
         border-width: 2px 0px 0px 0px;
-        border-color: #005795;
+        border-color: rgb(20, 20, 20);
    
       }
       .secContainer {

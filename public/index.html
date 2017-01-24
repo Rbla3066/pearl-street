@@ -11,9 +11,9 @@
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
 
 
-  <link href="https://fonts.googleapis.com/css?family=Nunito|Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/google-fonts.css">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css"><link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
 
   <link rel="stylesheet" href="assets/css/main.css">
   <style type="text/css">
@@ -160,7 +160,7 @@ border-width: 10px 0px 10px 0px;
 <div class="container-fluid blackGradient">
   <div class="row">
     <div class="col-12-md">
-      <div id="anchor"></div>
+      <div id="welcome"></div>
       <div id="landingView" class="fitToScreen">
         <div id="mainHeaderContainer" class="expandIn">
          <img class="homeLogo logoType" src="assets/logos/pearlstreetfulllogo5.png" alt="Pearl Street LED Logo">
@@ -294,12 +294,12 @@ border-width: 10px 0px 10px 0px;
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/assets/js/jquery.tap.js"></script>
 
-  <script src="/assets/js/navbar.js"></script>
+  <script type="text/javascript" src="/assets/js/navbar.js"></script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -316,7 +316,7 @@ border-width: 10px 0px 10px 0px;
         mobile = true;
       }
     var navLogo = $(".navbar-brand");
-    var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Crystal Auto Mall'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}, {quote: '"The finished product looks 1000% better than before..."', quotee: 'Quinnipiac University'}];
+    var quotes = [{quote: '“Pearl Street did everything they said they would, and more...”', quotee: 'Atlantic Health Jets Training Center'}, {quote: '“We recommended Pearl Street\'s services, because of their expertise and our successful project completion.”', quotee: 'Manhattan University'}, {quote: '“The LED design makes the facility look cleaner and brighter.”', quotee: 'Flemington Car & Truck Country GMC Dealership'}, {quote: '"The finished product looks 1000% better than before..."', quotee: 'Quinnipiac University'}];
     var ind = 0;
     setInterval(function(){
       ind++;
@@ -374,7 +374,6 @@ border-width: 10px 0px 10px 0px;
         }
         if(scrollTop <= height/4){
           var ratio = ((height/4 - scrollTop)/(height/4)).toFixed(1);
-          console.log(ratio)
           $(".logoType").attr("style", "opacity: "+ratio+";");
           header.attr("style", "margin-top: "+Math.floor((height/2 - 250) + scrollTop * ratio)+"px;");
         }
@@ -386,7 +385,7 @@ border-width: 10px 0px 10px 0px;
       navLogo.hide();
       $(".loadingPage").fadeOut("slow");
     location.href = "#";
-    location.href = "#anchor";
+    location.href = "#welcome";
     });
 
   </script>
