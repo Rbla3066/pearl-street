@@ -23,7 +23,7 @@ module.exports = function(app){
 		if(!name || !email || !message) return res.json(false);
 		transporter.sendMail({
           from: email,
-          to: 'rbla4655@gmail.com',
+          to: 'info@pearlstreetled.com',
           subject: name + ' from pearlstreetled.com',
           text: message + '\n \n' + email
         }, function(err, success){
