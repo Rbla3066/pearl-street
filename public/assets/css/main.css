@@ -770,6 +770,9 @@ h4 {
       #landingView {
         min-height: 600px;
       }
+      .telNum {
+      	float: left;
+      }
       .keyServiceContainer {
       	padding-bottom: 40px
       }
