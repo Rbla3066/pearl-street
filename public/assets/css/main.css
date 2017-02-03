@@ -755,8 +755,8 @@ h4 {
       }
     }
     @media screen and (max-width: 420px) {
-      #mainHeader {
-        padding-top: 100px;
+      .mobileLogo {
+      	margin-top: 150px;
       }
       .homeLogo {
       	display: none;
@@ -783,5 +783,4 @@ h4 {
         font-size: 18px;
       }
     }
-
 
