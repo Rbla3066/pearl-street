@@ -79,7 +79,8 @@
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="description" content="Pearl Street consistently delivers superior LED lighting upgrades and lighting retrofits across NJ and NY. The LED lighting systems are highly engineered and designed for optimal energy effeciency and savings."/>
   <meta name="keywords" content="LED lighting upgrades, LED lighting retrofits, lighting audits, lighting upgrades, lighting retrofits, energy efficiency, energy conservation, site lighting upgrades, lighting controls, LED lighting retrofits, LED fixtures, LED lamps, energy savings, LED rebates, LED lighting rebates, LED lighting incentives, NJ, NY, LED"/>
-  <meta name="generator" content="2017.0.1.363"/>
+  <meta name="googlebot" content="index, follow">
+  <meta name="author" content="Robert Black @ Pearl Street Systems">
   <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW, ARCHIVE"/><!-- custom meta -->
 </head>
 <body>
@@ -111,7 +112,7 @@
         <li class="active navbar-button1"><a href="/about">ABOUT <span class="sr-only">(current)</span></a></li>
         <li class="navbar-button1"><a href="/services">SERVICES </a></li>
         <li class="navbar-button1"><a href="/projects">PROJECTS </a></li>
-        <li class="navbar-button1"><a href="/contact">CONTACT </a></li>
+        <li class="navbar-button1"><a href="/contact">CONTACT </a></li><li class="navbar-button1"><a href="/careers">CAREERS </a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -180,7 +181,7 @@
         </li>
         <li>
           <h4 class="listHeader">A SOLE FOCUS ON LED LIGHTING SYSTEMS AND CONTROLS</h4>
-          <p>Unlike an ESCO (Energy Service Company), engineering firms, electrical distributers and electrical contractor LED lighting and controls is the only thing l we do.  And most architects and lighting design firms lack the controls experience and “sub: this work out to the manufacturers or other “biased” vendors.</p><br>
+          <p>Unlike an ESCO (Energy Service Company), engineering firms, electrical distributers and electrical contractor LED lighting and controls is the only thing we do.  And most architects and lighting design firms lack the controls experience and sub this work out to the manufacturers or other “biased” vendors.</p><br>
         </li>
         <li>
           <h4 class="listHeader">MANUFACTURER INDEPENDENT</h4>
@@ -261,12 +262,10 @@
   </div>
 </div>
 
-
-<script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
+  <!--        Scripts       -->
+  <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/assets/js/jquery.tap.js"></script>
-
   <script type="text/javascript" src="/assets/js/navbar.js"></script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -279,15 +278,10 @@
 
   </script>
   <script type="text/javascript">
-    var navLogo = $(".navbar-brand");
-    var mobile = false;
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        mobile = true;
-      }
 
+  //************************************************
+  //            Animations
 
-
-    var header = $("#mainHeaderContainer");
     $(window).scroll(function(){
       if(mobile) return;
       $(".scrollEffect").map(function(){
@@ -304,6 +298,10 @@
     }).on("mouseleave", function(){
       $(this).attr("style", "transform: scale(1)")
     });
+
+
+    //************************************************
+    //          Loading Page
     $(window).on("load", function(){
       $(".loadingPage").fadeOut("slow");
     });

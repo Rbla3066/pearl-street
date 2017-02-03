@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Pearl Street LED Lighting Systems | Admin</title>
+
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+
+
+  <link rel="stylesheet" href="/assets/css/google-fonts.css">
+  <!-- Latest compiled and minified CSS -->
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style type="text/css">
+    html, body {
+      background-color: lightgray;
+    }
+    th, td {
+      text-align: center;
+    }
+    th {
+      background-color: lightgray;
+      border-color: black;
+    }
+    #addReqInput:hover, #addResInput:hover {
+      cursor: pointer;
+      color: gray;
+    }
+    h4 {
+      text-shadow: 0px 0px white;
+    }
+    small {
+      color: gray;
+    }
+    textarea {
+      resize: none;
+    }
+  </style>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-md-2 col-sm-2 col-xs-0"></div>
+      <div class="col-md-8 col-sm-8">
+        <div class="panel panel-primary">
+          <div class="panel-heading"><h2>Careers</h2></div>
+          <div class="panel-body">
+            <table class="table table-bordered table-primary">
+
+              <tr>
+                <th> # </th>
+                <th> Job Title </th>
+                <th> Date Posted </th>
+                <th> Description </th>
+                <th> Delete </th>
+              </tr>
+
+            </table>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-0"></div>
+    </div>
+    <div class="row" style="margin: 50px 0px 50px 0px;">
+      <div class="col-md-2 col-sm-2 col-xs-0"></div>
+      <div class="col-md-8 col-sm-8">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h2>Add Careers</h2>
+          </div>
+          <div class="panel-body">
+            <form autocomplete="off">
+              <div class="form-group titleGroup">
+                <label class="control-label" for="titleInput">Job Title</label>
+                <input type="text" class="form-control" id="titleInput" placeholder="Job">
+              </div>
+              <div class="form-group descriptionGroup">
+                <label class="control-label" for="descriptionInput">Description</label> <small>Add a brief description of the work</small>
+                <textarea type="text" class="form-control" rows="3" id="descriptionInput" placeholder="Description ..."></textarea>
+              </div>
+            </form>
+            <div class="form-group">
+              <label class="control-label" for="addResponsibility">Responsibilities</label> <small>Enter responsibilities one by one</small>
+              <div class="input-group">
+                <input type="text" class="form-control" autocomplete="off" id="addResponsibility" placeholder="...">
+                <div class="input-group-addon" id="addResInput"> + </div>
+              </div>
+              <ul id="resList"></ul>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="addRequirement">Requirements</label> <small>Enter requirements one by one</small>
+              <div class="input-group">
+                <input type="text" class="form-control" autocomplete="off" id="addRequirement" placeholder="...">
+                <div class="input-group-addon" id="addReqInput"> + </div>
+              </div>
+              <ul id="reqList"></ul>
+            </div>
+            <button type="submit" id="addJob" class="btn btn-primary">Add Career</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-0"></div>
+    </div>
+
+  </div>
+
+
+
+  <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.tap.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+    //*************************************************
+    // Get initial careers from DB and populate table *
+     //************************************************
+
+
+    function getCareers(){
+      $.get('/api/careers', function(data, err){
+       
+        for(let i in data){
+          $(".table").append(`
+            <tr> 
+              <td>`+(parseInt(i) + 1)+`</td>
+              <td class='title`+i+`'>`+data[i].job_title+`</td>
+              <td>`+data[i].date_posted+`</td>
+              <td><button class='btn btn-success openBtn' data-num='`+i+`'><span class='glyphicon glyphicon-menu-down'></span></button></td>
+              <td><button class='btn btn-danger deleteBtn' data-num='`+i+`'>&times</button></td>
+            </tr>
+            `)
+        }
+        $('table').html($('table').html());
+      })
+    }
+    getCareers();
+
+    //************************************************
+    //             Sends new career to DB            *
+    //************************************************
+
+    $('#addJob').click(function(e){
+      var title = $('#titleInput').val();
+      var description = $('#descriptionInput').val();
+      var requirements = [];
+      var responsibilities = [];
+      $('.aRes').map(function(){
+        responsibilities.push($(this).text());
+      });
+      $('.aReq').map(function(){
+        requirements.push($(this).text());
+      });
+      if(title == '' || description == ''){
+        if(title == '') $('.titleGroup').addClass('has-error');
+        if(description == '') $('.descriptionGroup').addClass('has-error');
+        e.preventDefault();
+        return false;
+      }
+      var job = {
+        job_title: title,
+        job_description: description,
+        requirements: requirements,
+        responsibilities: responsibilities
+      }
+      console.log(job);
+      $.post('/api/careers/add', job, function(err){
+        console.log(err);
+        location.reload();
+      })
+    })
+    //************************************************
+    //           Delete a Job from DB                *
+    //************************************************
+
+    $('body').on('click', '.deleteBtn', function(){
+      var job = {job_title: $('.title'+ $(this).data('num')).html().trim()}
+      console.log(job);
+      $.post('/api/careers/delete', job, function(err){
+        console.log(err);
+        location.reload();
+      })
+    })
+
+
+    //************************************************
+    //            Open details of Job                *
+    //************************************************
+
+
+    $('body').on('click', '.openBtn', function(){
+      var job = $('.title'+ $(this).data('num')).html().trim();
+      $.get('/api/careers/get/'+job, function(data, err){
+        $('#description').html(`
+          <h4>Job Title</h4>
+          `+data.job_title+`
+          <h4>Description</h4>
+          `+data.job_description+`
+          <h4>Responsibilites</h4>
+          <ul id="resList2"></ul>
+          <h4>Requirements</h4>
+          <ul id="reqList2"></ul>
+          `);
+        for(let i in data.responsibilities) $('#resList2').append('<li>'+data.responsibilities[i]+'</li>');
+        for(let i in data.requirements) $('#reqList2').append('<li>'+data.requirements[i]+'</li>');
+      })
+    })
+
+    //************************************************
+    //Add individual Requirements & Responsibilities *
+    //************************************************
+
+    function addReq(){
+      var requ = $('#addRequirement').val().trim();
+      $('#reqList').append('<li class="aReq">'+requ+'</li>');
+      $('#addRequirement').val('');
+    }
+    $('#addReqInput').click(addReq);
+    $('#addRequirement').on('keyup', function(e){
+      if(e.keyCode == 13) addReq();
+    });
+    function addRes(){
+      var resp = $('#addResponsibility').val().trim();
+      $('#resList').append('<li class="aRes">'+resp+'</li>');
+      $('#addResponsibility').val('');
+    }
+    $('#addResInput').click(addRes);
+    $('#addResponsibility').on('keyup', function(e){
+      if(e.keyCode == 13) addRes();
+    });
+
+  })
+  </script>
+</body>
+</html>

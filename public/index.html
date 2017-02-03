@@ -117,7 +117,8 @@ a:hover {
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="description" content="Pearl Street Systems provides commercial LED lighting upgrades, site lighting retrofits, audits, consulting, and design services across New Jersey and New York."/>
   <meta name="keywords" content="LED lighting upgrades, LED lighting retrofits, lighting audits, lighting upgrades, lighting retrofits, energy efficiency, energy conservation, site lighting upgrades, lighting controls, LED lighting retrofits, LED fixtures, LED lamps, energy savings, LED rebates, LED lighting rebates, LED lighting incentives, NJ, NY, LED"/>
-  <meta name="generator" content="2017.0.1.363"/>
+  <meta name="googlebot" content="index, follow">
+  <meta name="author" content="Robert Black @ Pearl Street Systems">
   <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW, ARCHIVE"/><!-- custom meta -->
 </head>
 <body>
@@ -126,6 +127,9 @@ a:hover {
       <img src="/assets/logos/pearlstreetfulllogo5.png" alt="Pearl Street LED Logo" style="width: 300px"><img style="width: 300px" src="/assets/logos/loading.gif" class="loadingImageGif">
   </div>
 </div>
+
+<!--              Navbar        -->
+
 <nav class="lightshadow navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -145,11 +149,11 @@ a:hover {
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active navbar-button1" data-linktarget="homePage"><a href="/">HOME <span class="sr-only">(current)</span></a></li>
+        <li class="active navbar-button1"><a href="/">HOME <span class="sr-only">(current)</span></a></li>
         <li class="navbar-button1"><a href="/about">ABOUT </a></li>
         <li class="navbar-button1"><a href="/services">SERVICES </a></li>
         <li class="navbar-button1"><a href="/projects">PROJECTS </a></li>
-        <li class="navbar-button1"><a href="/contact">CONTACT </a></li>
+        <li class="navbar-button1"><a href="/contact">CONTACT </a></li><li class="navbar-button1"><a href="/careers">CAREERS </a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -217,6 +221,8 @@ a:hover {
     </div>
   </div>
 
+  <!--        Footer     -->
+
   <div class="row">
     <div id="footer" class="col-md-12">
       <div style="text-align: center;">
@@ -263,6 +269,7 @@ a:hover {
   </div>
 </div>
 
+  <!--                Scripts       -->
 
   <script type="text/javascript" src="/assets/js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
@@ -279,6 +286,10 @@ a:hover {
 
   </script>
   <script type="text/javascript">
+
+    //************************************************
+    //*       Mobile Query / Quotes                  *
+    //************************************************
     var mobile = false;
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         mobile = true;
@@ -297,7 +308,9 @@ a:hover {
       
     }, 3500);
 
-
+    //************************************************
+    //*        Animations and hover Effects          *
+    //************************************************
 
     $(".socialImg").on("mouseover", function(){
       $(this).attr("style", "transform: scale(1.2)")
@@ -314,6 +327,13 @@ a:hover {
         var target = $($(this).data("target"));
         target.attr("src", target.data("initial"));
       });
+      
+
+
+      //************************************************
+      //*            Scroll Animations                 *
+      //************************************************
+
       var header = $("#mainHeaderContainer");
       var height = $(window).height();
       var atHead = true;
@@ -349,11 +369,15 @@ a:hover {
       $("body").prepend("<div class='scrollCarrot' style='top: "+(height - 50)+"px;'><span class='glyphicon glyphicon-menu-down float'></span></div>");
     });
 
+    //************************************************
+    //*          Loading Page / Anchor               *
+    //************************************************
+
     $(window).on("load", function(){
       navLogo.hide();
       $(".loadingPage").fadeOut("slow");
-    location.href = "#";
-    location.href = "#welcome";
+      location.href = "#";
+      location.href = "#welcome";
     });
 
   </script>

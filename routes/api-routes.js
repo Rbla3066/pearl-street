@@ -8,11 +8,10 @@ var transporter = nodemailer.createTransport({
 	}
 });
 var mongojs = require('mongojs');
-var db = mongojs('pearl_street', ['pearl_street', 'existing_fixtures', 'led_fixtures']);
-var image_downloader = require('image-downloader');
-var download = require('downloadjs');
+var db = mongojs('mongodb://pearlstreetled:lights55@ds037272.mlab.com:37272/heroku_rd83pvs3', ['careers']);
 var request = require('request');
 var fs = require('fs');
+var moment = require('moment');
 
 module.exports = function(app){
 
@@ -31,38 +30,37 @@ module.exports = function(app){
           return res.json(true);
         });
 	});
-	app.get('/api/projects', function(req, res){
-		db.projects.find({}, function(err, data){
-			res.json(data);
-		})
-	})
-	/*app.get('/handle/:projectname', function(req, res){
-		var projectUrl = req.params.projectname;
-		db.projects.find({project_url: projectUrl}, function(err, data){
-			if(err) return res.json("Error: " + err);
-			db.projects.find().sort({position: 1}, function(err, data2){
-				if(err) return res.json("Error: " + err);
-				var project = data[0];
-				project.list = data2;
-				res.render('index', {project, title: project.project_name});
-			})
-		})
-	})*/
-	app.get('/api/existing-fixtures', function(req, res){
-		db.existing_fixtures.find({}, function(err, data){
-			if(err) return res.json("Error: "+ err);
+
+
+	app.get('/api/careers', function(req, res){
+		db.careers.find({}, function(err, data){
+			if(err) return res.json(null);
 			return res.json(data);
 		})
 	})
-	app.get('/api/led-fixtures', function(req, res){
-		db.led_fixtures.find({}, function(err, data){
-			if(err) return res.json("Error: "+ err);
-			return res.json(data);
+
+	app.get('/api/careers/get/:name', function(req, res){
+		var name = req.params.name;
+		db.careers.find({job_title: name}, function(err, data){
+			if(!data[0]) return res.json(null);
+			return res.json(data[0]);
 		})
 	})
-	/*app.post('/api/image', function(req, res){
-		//var image = req.files.projectPhoto;
-		console.log(req.files)
-		res.json(req.route.stack)
-	})*/
+
+	app.post('/api/careers/add', function(req, res){
+		var job = req.body;
+		var date = moment().format('MMM DD, YYYY');
+		job['date_posted'] = date;
+		db.careers.insert(job, function(err){
+			if(err) return res.json(err);
+			return res.json(null);
+		})
+	})
+	app.post('/api/careers/delete', function(req, res){
+		var job = req.body;
+		db.careers.remove(job, function(err){
+			if(err) return res.json(err);
+			return res.json(null);
+		})
+	})
 }
